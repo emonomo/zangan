@@ -21,6 +21,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;  /*不累加邊框與內距 rwd 甜甜*/
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -48,31 +49,96 @@ table {
 	border-spacing: 0;
 }
 
+
+
 /* 共用 */
 img {
     display: block; /*本來是inline-block,會有空白間距*/
     width: 100%;
 }
+body::-webkit-scrollbar {   /*網路上找收起卷軸的方法*/
+    display: none;
+}
 
 /* 頁首區 */
 #topbar{
 	display: flex; /*flex有預設的各種屬性，包括水平*/
-	justify-content: space-between; /*space-between(貼齊start/end)*/
-	padding: 20px;
+	padding: 15px;
     background-color: #3C4935;
+	justify-content:  space-between;;
+	align-items: center;
+	overflow-y: hidden;	
+
 }
+
+#topbar nav{
+	width: 100%;
+	display: flex;
+	height: 50px;
+	justify-content:  space-around;
+	align-items: center;
+}
+
 
 #topbar a {
     display: block;
     color: #fff;
     text-decoration: none;
+	padding: 0 20px;
 }
 
-#topbar nav > * {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#topbar li {
+	display: inline-flex;
+
 }
 
+
+	.menu{
+		padding:0 200px 0 0;
+		justify-content: flex-start;
+		}
+
+	.img_login{
+		padding:0 0 0 500px;
+		justify-content: flex-end;
+		}
+
+
+/* 內容區  */
+    /* image caroisel 工作坊輪播區 */
+		
+	#carousel{
+		display: flex;
+		width: 100%;
+		height: 400px;
+		border: 0.2px solid gray;
+		justify-content: center;
+		align-content: center;
+	}
+    
+	#carousel_words{
+		width: 30%;
+		height: 400px;
+		padding:100px 150px 50px ;
+		justify-content: center;
+		align-content: center;
+	}
+
+	#carousel_words img{
+		width: 20%;
+	}
+
+	#carousel_words h2{
+		font-size: 1.5rem;
+		letter-spacing: .1rem;
+	}
+
+	#carousel_image{
+		width: 70%;
+		height: 400px;
+		background-image: url('./img/course/course_banner.png');
+		background-size: cover; /*覆蓋:自動拉伸圖片 並裁切多餘部分*/
+		background-position: center;/*圖片在畫面置中縮放 (本來只切右邊)*/
+	
+	}
 
