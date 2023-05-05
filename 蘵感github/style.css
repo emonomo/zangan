@@ -383,7 +383,8 @@ hr {
 
 .menu {
     margin-right: 200px;
-    padding: 0 20px;
+    padding: 0 10px;
+    /* border: solid 5px red; */
 }
 
 .icon {
@@ -398,9 +399,11 @@ hr {
 #topbar li {
     display: flex;
     align-items: center;
-    padding: 10px;
-    margin: 20px;
-    /* border: #ce89df 5px solid; */
+    padding: 10px 5px;
+    margin: 10px;
+    /* border: #ce89df 1px solid; */
+    /* t1 */
+    width: 70px;
 }
 
 #topbar span {
@@ -579,13 +582,14 @@ hr {
     /* justify-content: space-between; */
     /* align-items: center; */
     /* border: #72a4db 5px solid; */
-    height: 700px;
+    height: 600px;
     /* padding: 0 30px; */
     /* t2 */
     position: relative;
     /* width: 1400px; */
     /* t3 */
-    width: 1180px;
+    width: 1220px;
+    /* width: 60%; */
 }
 
 /* 單一課程 */
@@ -595,6 +599,8 @@ hr {
     /* padding: 0  10px; */
     /* margin: 0 5px; */
     /* border: #df8686 5px solid; */
+    /* width: 210px;
+    height: 430px; */
 
 }
 
@@ -733,6 +739,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     /* border: solid 5px rgb(244, 184, 184); */
+    position: relative;
 }
 
 /* 整個圖片區域 */
@@ -856,16 +863,17 @@ hr {
     /* margin: 20px 0; */
 }
 
+/* 整個區塊 */
 .a{
     position: relative;
     /* border: solid 5px #83c1d0; */
 }
 
-
+/* bg_logo */
 .b{
     position: absolute;
-    top: -80px;
-    right: 150px;
+    top: -200px;
+    right: 100px;
 }
 
 
