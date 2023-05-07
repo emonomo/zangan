@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unna:wght@400;700&display=swap');
+
 /*eric css reset */
 
 html, body, div, span, applet, object, iframe,
@@ -59,22 +62,54 @@ img {
 body::-webkit-scrollbar {   /*網路上找收起卷軸的方法*/
     display: none;
 }
+h1,h2,p,h4{    /*p內文 h4標註*/
+	font-family: 'Noto Serif TC', serif;
+	letter-spacing:  .12em;
+    line-height: 1.8rem;
+}
 
+h3{   /*中文上方的英文小標*/
+	font-family: 'Unna', serif;
+	letter-spacing:  .12em;
+	font-size: .9rem;
+}
+
+h1{
+	font-weight: 400;
+    font-size: 1.5rem;
+}
+
+h2{
+	font-weight: 500;
+    font-size: 1rem;
+}
+
+p{
+	font-weight: 500;
+    font-size: .9rem;
+}
+h4{
+	font-weight: 500;
+    font-size: .75rem;
+}
+
+/*-----------------------------------------------------------*/
 /* 頁首區 */
 #topbar{
 	display: flex; /*flex有預設的各種屬性，包括水平*/
-	padding: 15px;
+	padding: 15px 108px;
     background-color: #3C4935;
-	justify-content:  space-between;;
-	align-items: center;
+	justify-content:  space-between;
+	
 
 }
 
 #topbar nav{
-	width: 100%;
+	
 	display: flex;
-	height: 50px;
-	justify-content:  space-around;
+	width: 100%;
+	height: 50px; 
+	justify-content:   space-between;
 	align-items: center;
 }
 
@@ -83,25 +118,28 @@ body::-webkit-scrollbar {   /*網路上找收起卷軸的方法*/
     display: block;
     color: #fff;
     text-decoration: none;
-	padding: 0 20px;
+	padding: 10px 20px;
 }
 
 #topbar li {
-	display: flex;
+	display: inline-flex;
 	justify-content:  space-around;
 }
 
 
 	.menu{
-		padding-right: 20%;
-		justify-content: flex-start;
+		 padding-right: 1%; 
+
 		}
 
 	.img_login{
-		padding-left: 15%;
-		justify-content: flex-end;
+		 padding-left: 15%
+	
 		}
-
+.icon{
+   justify-content: center;
+   align-items: center;
+}
 
 /* 內容區  */
     /* image caroisel 工作坊輪播區 */
@@ -118,18 +156,34 @@ body::-webkit-scrollbar {   /*網路上找收起卷軸的方法*/
 	#carousel_words{
 		width: 30%;
 		height: 400px;
-		padding:100px 150px 50px ;
+		padding:82px 128px 50px ;
 		justify-content: center;
 		align-content: center;
 	}
+
+
+
+    #carousel_words h2{
+	margin: 10px 0;
+	text-align: justify; /*!!!!!齊行的意思*/}
 
 	#carousel_words img{
 		width: 20%;
 	}
 
-	#carousel_words h2{
-		font-size: 1.5rem;
-		letter-spacing: .1rem;
+	#carousel_words h1{
+	margin-top: 10px;
+	font-weight: 600;
+	}
+
+	#carousel_words a{
+		font-family: 'Noto Serif TC', serif;
+	    letter-spacing:  .12em;
+        line-height: 34px;
+		font-size: 0.9rem;
+		display: block;
+		text-decoration: none;
+		color: #1D201D;
 	}
 
 	#carousel_image{
@@ -141,3 +195,162 @@ body::-webkit-scrollbar {   /*網路上找收起卷軸的方法*/
 	
 	}
 
+/* 選取按鈕區  要跳到此頁面的對應區塊 */
+	#courseIntro{
+		width: 100%;
+		height: 240px;
+		padding: 48px 210px;
+		background-color: #fff;
+	}
+
+	#courseIntro div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+
+	.button ul{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.button li{
+		display: flex;
+		width: 180px;
+		height: 40px;
+		border: 1px solid #E7E4DB;
+		border-radius: .3rem;   /*圓角*/
+		justify-content: center;
+		align-items: center;
+	}
+
+	.button a{
+		display: block;
+		text-decoration: none;
+		padding: 8px 50px;
+		font-family: 'Noto Serif TC', serif;
+			letter-spacing:  .12em;
+			line-height: 34px;
+			font-weight: 700;
+			color: #3C4935;
+	}
+/* 課程區大圖 *5 section  */
+#courseAll{
+	display: flex;
+	width: 100%;
+	height: 3880px;
+	background-color: #3C4935;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.container{
+   width: 100%;
+   margin: 75px 128px;
+}
+
+
+#courseAll img{
+   object-fit: cover;
+   
+}
+
+
+/*#courseAll section*/
+#courseAll section{
+	position: relative;
+    height: 740px;
+}
+
+
+/*課程標籤*/
+
+
+/*香水*/
+/*#courseAll section div*/
+
+
+#courseAll section div{
+	display: block;
+	text-align: left;
+    position: absolute;
+	bottom: 60px;
+	right: 0px;
+	width: 450px; 
+    height: 190px;
+	padding: 26px 20px;
+    
+    /*標籤樣式*/
+	background-color: rgba(155, 130, 86, .35);
+	backdrop-filter: blur(5px);
+	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.left{
+	display: block;
+	text-align: left;
+    position: absolute;
+	bottom: 60px;
+	left: 0px;
+	width: 450px; 
+    height: 190px;
+	padding: 26px 20px;
+    
+    /*標籤樣式*/
+	background-color: rgba(155, 130, 86, .35);
+	backdrop-filter: blur(5px);
+	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+
+
+#courseAll a{
+	display: block;
+	text-align: right;
+	z-index: 3;
+
+	text-decoration: none;
+	font-family: 'Noto Serif TC', serif;
+		letter-spacing:  .12em;
+		font-weight: 600;
+		font-size: .9rem;
+		color: #fff;
+}
+
+#courseAll h1{
+	color: #fff;
+	padding-bottom: 10px;
+	font-weight: 600;
+}
+#courseAll h2{
+	color: #fff;
+	padding-right: 100px;
+	text-align: justify;
+	
+}
+
+
+
+
+
+/*自由繪畫
+#courseAll section div{
+	display: block;
+	text-align: left;
+    position: absolute;
+	bottom: 60px;
+	left: 0px;
+	width: 450px; 
+    height: 190px;
+	padding: 26px 20px;
+    
+    /*標籤樣式
+	background-color: rgba(155, 130, 86, .35);
+	backdrop-filter: blur(5px);
+	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}*/
