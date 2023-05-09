@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unna:wght@400;700&display=swap');
+
+
+/* 共用 */
+img {
+    display: block; /*本來是inline-block,會有空白間距*/
+    width: 100%;
+}
+
+
+h1,h2,p,h4{    /*h1中文大標 h2中文標題 p內文 h4標註*/
+	font-family: 'Noto Serif TC', serif;
+	letter-spacing:  .12em;
+    line-height: 1.8rem;
+}
+
+h3{   /*h3 中文標題上方的英文小標*/
+	font-family: 'Unna', serif;
+	letter-spacing:  .12em;
+	font-size: .9rem;
+}
+
+h1{
+	font-weight: 400;
+    font-size: 1.5rem;
+}
+
+h2{
+	font-weight: 500;
+    font-size: 1rem;
+}
+
+p{
+	font-weight: 500;
+    font-size: .9rem;
+}
+h4{
+	font-weight: 500;
+    font-size: .75rem;
+}
