@@ -159,6 +159,8 @@ h4{
 		padding:82px 128px 50px ;
 		justify-content: center;
 		align-content: center;
+		overflow: hidden;
+	    text-overflow: ellipsis;  /*文字超過時出現省略號*/
 	}
 
 
@@ -166,6 +168,7 @@ h4{
     #carousel_words h2{
 	margin: 10px 0;
 	text-align: justify; /*!!!!!齊行的意思*/}
+
 
 	#carousel_words img{
 		width: 20%;
