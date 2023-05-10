@@ -360,7 +360,8 @@ hr {
     z-index: 1;
 }
 
-/* 1.topbar */
+/* 1.topbar  */
+/* 精簡code +a +svg+btn */
 /* 字距色彩大小 */
 #topbar {
     background-color: #3C4935;
@@ -398,8 +399,11 @@ hr {
 
 #topbar li {
     display: flex;
+    /* align-items: center; */
+    /* +++ */
+    justify-content: space-around;
     align-items: center;
-    padding: 10px 5px;
+    /* padding: 10px 5px; */
     margin: 10px;
     /* border: #ce89df 1px solid; */
     /* t1 */
@@ -411,27 +415,62 @@ hr {
 }
 
 /* 玻璃擬態 */
+/* 0.原本的底色 */
 .signup {
-    background-color: #E7E4DB;
-    opacity: 19%;
-    width: 100px;
+    background-color: #9B8256;
+    opacity: 100%;
+    /* +++沒反應 */
+    width: 160px;
     height: 30px;
+    /* 以上+++ */
+    padding: 10px 80px;
+    margin: 0 10px;
+    /* +++ */
+
     z-index: 1;
     position: relative;
-}
-
-/* 立即報名 */
-.word {
-    z-index: 99;
-    position: absolute;
     /* border: #8994df 5px solid; */
 }
 
-/* 立即報名+玻璃擬態 */
+
+/* 快速報名 */
+/* 0.原本 */
+.word {
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    /* border: #89dfa3 5px solid; */
+    justify-content: center;
+    align-items: center;
+    /* +++ */
+    padding: 0 20px;
+}
+
+
+/* +++測試 */
+/* 快速報名 */
+#topbar .m_btn {
+    background-color: rgba(155,130,86,.74);
+    border-color: #9B8256;
+    border-radius: 5px;
+    width: 160px;
+    height: 35px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#topbar .m_btn a {
+    margin-right: 15px;
+}
+
+/* 快速報名+玻璃擬態 */
 .box {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 /* 2.banner */
@@ -562,8 +601,6 @@ hr {
     /* border: solid 5px red;  */
 }
 
-
-
 /* 4.course */
 #course {
     background-color: #3C4935;
@@ -640,6 +677,7 @@ hr {
 .course_class {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     /* t7 */
     margin: 20px 0;
     /* border: #4727be 5px solid;  */
@@ -650,7 +688,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     /* border: #4727be 5px solid; */
 }
 
@@ -658,6 +696,8 @@ hr {
 .course_text h3 {
     display: flex;
     color: #E7E4DB;
+    /* +++ */
+    margin:10px;
     /* border: #acbe27 5px solid; */
 }
 
@@ -728,6 +768,7 @@ hr {
     flex-direction: column;
 
 }
+
 
 /* 5.teachers */
 #teachers {
@@ -872,19 +913,336 @@ hr {
 /* bg_logo */
 .b{
     position: absolute;
-    top: -200px;
-    right: 100px;
+    top: -240px;
+    right: 150px;
 }
 
 
 
-
-
-
-
-
-
-
 /* 6.news  */
+#news {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    position: relative;
+    /* 把上下區塊連在一起 才不會有空白  */
+    border: solid 1px #F0F0F0;
+    height: 100vh;
+    /* t */
+    /* height: 20vh; */
+    height: 17vh;
+    background-color: #F0F0F0;
+}
+
+/* 圖片的範圍 */
+.news_main {
+    /* width: 300px; */
+    /* height: 500px; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* border: solid 5px red; */
+}
+
+/* 左邊圖片 */
+.news_main img {
+    height: 100vh;
+}
+
+#news.title {
+    background-color: #F0F0F0;
+}
+
+/* 主要文字內容區塊 */
+#news .news_col {
+    width: 700px;
+    height: 620px;
+    margin: 40px 650px;
+    /* border: solid 5px red; */
+    /* t1 */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: left; */
+}
+
+/* hr */
+/* .news_hrline {
+    width: 700px;
+} */
+
+/* news 標題區塊 */
+#news nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 700px;
+    height: 80px;
+    /* 原本 */
+    /* padding: 15px 0;
+    margin: 10px 0; */
+    /* border: solid 5px rgb(144, 178, 213); */
+}
+
+/* 查看更多 */
+.news_more {
+    vertical-align: bottom;
+    position: absolute;
+    right: -20px;
+    top: -8px;
+    line-height: 30px;
+    padding: 1px;
+    margin: 10px;
+    /* border: solid 5px rgb(144, 178, 213); */
+}
+
+/* news內容區塊 */
+.news_news {
+    position: relative;
+    padding: 5px 0;
+    margin: 3px 0;
+    width: 700px;
+    height: 100px;
+    /* border: solid 5px rgb(144, 178, 213); */
+}
+
+/* icon右圈圈箭頭 */
+.news_img {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 48px;
+    height: 48px;
+    margin: 20px;
+    /* border: solid 5px rgb(144, 178, 213); */
+}
+
+/* :hover */
+.news_img {
+    background-image: url(img/index/index-news/arrow\(白\).svg);
+}
+
+.news_img :hover {
+    background-image: url(img/index/index-news/arrow\(黑\).svg);
+}
+
+.news_date {
+    font-size: 14px;
+    color: #1d201d;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin: 10 0px;
+    text-align: start;
+    width: 700px;
+}
+
+.news_text {
+    font-size: 16px;
+    color: #1d201d;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin: 10 0px;
+    text-align: start;
+    width: 700px;
+}
+
+#news hr {
+    /* padding: 5px; */
+    /* color: #797474; */
+    border-color: #797474;
+    margin: 20px 0;
+    /* margin: 5 5 0 5px; */
+}
+
+#news h1{
+    font-size: 34px;
+    color: #1D201D;
+}
+
+
 /* 7.media */
+#media {
+    /* vertical-align: middle; */
+    height: 100vh;
+    /* t */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ; */
+    margin-top:700px ;
+    /* border: solid 5px red; */
+}
+
+/* 標題區 */
+.media_nav {
+    /* position: relative; */
+    padding: 15px  5px 5px 10px;
+    height: 80px;
+    /* t */
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    /* border: solid 5px red; */
+}
+
+#media hr {
+    width: 700px;
+    background-color:#797474;
+    margin: 30px 0;
+}
+
+/* logo */
+.media_logo {
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+    /* t */
+    /* position: absolute;
+    right: 0;
+    top: 0; */
+    /* border: solid 5px red; */
+    width: 700px;
+    margin-right:10px ;
+
+}
+
+/* 大區塊 */
+.media_main {
+    display: flex;
+    justify-content: space-around;
+    /* border: solid 5px rgb(163, 236, 159); */
+}
+
+/* 小區塊*6 */
+.media_section {
+    width: 400px;
+    height: 400px;
+    /* border: solid 5px rgb(159, 214, 236); */
+    padding: 0 10px;
+    margin:0 10px ;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+/* 
+.media_col{
+    width: 400px;
+    border: #a90707d3 5px solid;
+} */
+
+/* #media img{
+    width: 350px;
+    height: 200px;
+} */
+
+/* 內文日期 */
+.media_date {
+    font-size: 14px;
+    color: #414042;
+    letter-spacing: 2px;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* 內文小標 */
+.media_title {
+    font-size: 16px;
+    color: #1D201D;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* 內文文字 */
+.media_text {
+    font-size: 14px;
+    color: #5C5C5C;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* 閱讀更多 */
+.media_more {
+    padding: 5px;
+    margin: 5px;
+    font-size: 14px;
+    color: #1D201D;
+    letter-spacing: 2px;
+}
+
+/* nav區 */
+.c {
+    /* border: solid 5px rgb(250, 150, 150); */
+    display: flex;
+    /* justify-content: center; */
+    padding: 10px 10px 0 10px;
+    margin: 20px  10px 50px 10px;
+   
+}
+
 /* 8.footer */
+#footer {
+    background-color: #3C4935;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 400px;
+    /* border: solid 5px red; */
+
+}
+
+.footer_ul {
+    display: flex;
+    /* justify-content: space-around;
+    align-items: center; */
+    /* border: solid 5px rgb(142, 221, 211); */
+}
+
+.footer_li {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    /* border: solid 5px rgb(206, 235, 171); */
+    /* t2 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 上面列 */
+/* logo/access/contact */
+.footer_nav {
+    margin: 30px 0;
+}
+
+/* 下面列 */
+/* copyright/icon_social media/QA */
+.footer_main {
+    /* position: absolute;
+    left: 0;
+    bottom: 0; */
+    /* border: solid 5px rgb(153, 191, 212); */
+    margin: 30px 0;
+}
+
+.copyright{
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Unna', serif;
+}
+
+#footer h1{
+    color: #fff;;
+    font-size: 30px;
+    font-family: 'Unna', serif;
+
+}
+
+#footer h3{
+    color: #E7E4DB;
+    
+}
