@@ -515,6 +515,7 @@ hr {
     
 }
 
+/* 背景影片MP4 */
 #banner video {
     position: absolute;
     top: 0;
@@ -526,6 +527,21 @@ hr {
     height: 100%;
     
 }
+
+/* 背景影片gif img */
+/* gif影片模糊不使用 */
+#banner .bgvideo img,
+#banner .bgvideo figure{
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; */
+    /* RWD物件填滿 */
+    /* object-fit: cover;
+    width: 100%;
+    height: 100%; */
+    /* border: solid 5px rgb(222, 176, 215); */
+} 
 
 #banner .logo{
     /* z-index: 999; */
