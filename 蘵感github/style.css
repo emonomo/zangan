@@ -213,8 +213,8 @@ h4 {
 
 .more {
     font-size: 14px;
-    /* color: #1D201D; */
-    color: red;
+    color: #1D201D;
+    /* color: red; */
     letter-spacing: 2px;
     padding: 5px 0;
 }
@@ -360,11 +360,12 @@ hr {
     z-index: 1;
 }
 
-/* 1.topbar  */
+/* 1.topbar white  */
 /* 精簡code +a +svg+btn */
 /* 字距色彩大小 */
-#topbar {
-    background-color: #3C4935;
+#topbarw {
+    /* background-color: #3C4935; */
+    background-color: (255,255,255,0.05);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -372,6 +373,231 @@ hr {
     letter-spacing: 2px;
     color: #fff;
     height: 10vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+#topbarw a {
+    color: #fff;
+}
+
+#topbarw ul {
+    display: flex;
+}
+
+/* x */
+#topbarw .menu {
+    width: 500px;
+    margin-right: 100px;
+    padding: 0 0px;
+    /* border: solid 5px red; */
+    /* +++0510 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* x */
+#topbarw .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-left: 350px;
+    /* border: #f00e0e 5px solid;  */
+}
+
+#topbarw li {
+    display: flex;
+    /* align-items: center; */
+    /* +++ */
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 10px 5px; */
+    margin: 10px;
+    /* border: #ce89df 1px solid; */
+    /* t1 */
+    width: 70px;
+}
+
+#topbarw span {
+    padding-left: 5px;
+}
+
+/* 玻璃擬態 */
+/* 0.原本的底色 */
+/* x */
+#topbarw .signup {
+    background-color: #9B8256;
+    opacity: 100%;
+    /* +++沒反應 */
+    width: 160px;
+    height: 30px;
+    /* 以上+++ */
+    padding: 10px 80px;
+    margin: 0 10px;
+    /* +++ */
+
+    z-index: 1;
+    position: relative;
+    /* border: #8994df 5px solid; */
+}
+
+
+/* 快速報名 */
+/* 0.原本 */
+/* x */
+#topbarw .word {
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    /* border: #89dfa3 5px solid; */
+    justify-content: center;
+    align-items: center;
+    /* +++ */
+    padding: 0 20px;
+}
+
+
+/* +++測試 */
+/* 快速報名 */
+#topbarw .m_btn {
+    background-color: rgba(155, 130, 86, .74);
+    border-color: #9B8256;
+    border-radius: 5px;
+    width: 160px;
+    height: 35px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#topbarw .m_btn a {
+    margin-right: 15px;
+}
+
+/* 快速報名+玻璃擬態 */
+#topbarw .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#topbarw .logo{
+    margin-left: 100px;
+    /* border: solid 5px salmon; */
+}
+
+/* 2.banner */
+#banner{
+    height: 100vh;
+    /* border: solid 5px rgb(186, 229, 181); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+#banner .sec{
+    position: relative;
+    z-index: 99;
+    /* border: solid 5px salmon; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* RWD物件填滿 */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#banner .logo{
+    /* z-index: 999; */
+    /* border: solid 5px rgb(222, 176, 215); */
+    /* width: 80px;
+    height: 80px; */
+    /* z-index: 2; */
+    
+
+}
+
+#banner .text{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    
+    /* border: solid 5px rgb(158, 178, 233); */
+}
+
+#banner h1,#banner h2,#banner h3{
+    color: #fff;
+}
+
+#banner .more{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#banner h1{
+    font-size: 28px;
+    padding: 20px 0;
+}
+
+#banner h2{
+    font-size: 38px;
+    padding: 20px 0;
+}
+
+#banner h4{
+    margin: 10px;
+    font-size: 34px;
+    color: #fff;
+}
+
+#banner h3{
+    margin: 10px;
+}
+
+/* 1.2topbar green  */
+/* 精簡code +a +svg+btn */
+/* 字距色彩大小 */
+#topbar  {
+    background-color: #3C4935;
+    /* background-color: (255,255,255,0.05); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #fff;
+    height: 10vh;
+    /* 固定捲軸 */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
 }
 
 #topbar a {
@@ -383,17 +609,22 @@ hr {
 }
 
 .menu {
-    margin-right: 200px;
-    padding: 0 10px;
+    width: 500px;
+    margin-right: 100px;
+    padding: 0 0px;
     /* border: solid 5px red; */
+    /* +++0510 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    margin-left: 200px;
+    padding: 40px;
+    margin-left: 350px;
     /* border: #f00e0e 5px solid;  */
 }
 
@@ -450,7 +681,7 @@ hr {
 /* +++測試 */
 /* 快速報名 */
 #topbar .m_btn {
-    background-color: rgba(155,130,86,.74);
+    background-color: rgba(155, 130, 86, .74);
     border-color: #9B8256;
     border-radius: 5px;
     width: 160px;
@@ -473,7 +704,12 @@ hr {
 
 }
 
-/* 2.banner */
+#topbar .logo{
+    margin-left: 100px;
+    /* border: solid 5px salmon; */
+}
+
+
 /* 3.about */
 #about {
     position: relative;
@@ -720,28 +956,12 @@ hr {
     left: 0;
     bottom: 0;
     z-index: 99;
-    /* test */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: space-between;
-    vertical-align:middle; */
-    /* t7 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* 查看更多 */
-.course_more {
-    display: block;
-    text-align: left;
-    margin-left:  10px;
-    margin-top: 40px;
-    bottom: 0;
-    /* border: solid 5px rgb(205, 231, 133); */
-    /* border-style: hidden; */
-    /* padding: 0 5px; */
-}
-
-/* 查看更多 */
+/* 往右箭頭查看更多 */
 #course a {
     text-decoration: none;
     color: #fff;
@@ -749,8 +969,6 @@ hr {
     letter-spacing: 2px;
 
 }
-
-/* test */
 
 /* 文字內容 用鮮花~ */
 #course p {
@@ -760,6 +978,10 @@ hr {
     letter-spacing: 2px;
     line-height: 1.4;
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* test2 */
