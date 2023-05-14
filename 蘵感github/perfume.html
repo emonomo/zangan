@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>perfume</title>
     <link rel="stylesheet" href="./perfume.css">
+     <link rel="stylesheet" href="./perfume.js">
 </head>
 <body>
 
@@ -93,24 +94,102 @@
          </div>
          <!-- 課程選項 -->
          <section id="list">
-            <div class="chosen" style="position: relative;"> 
-             <h3 class="class_name">A</h3>
-               <div class="box_inner">
-                  <h1>茶藝興趣A班</h1>
-                  <h2>週五 下午14:00-16:00，共6堂<br>
-                    3/3、3/10、3/17、3/24、3/31、4/7</h2>
-                  <div class="price"><p style="font-size: 1.2rem;">$</p><h3>8000</h3></div>
-                  <img class="cart" src="./img/course_item/newcar.svg" alt="" style="width:auto; margin-left: 30px;">
-               </div> 
-
-               </div>
-           
-       
+            <!-- 茶藝興趣A班 -->
+            <div style="position: relative;" class="box">
+                <a href="#" alt="" class="chosen" style="position: absolute;">
+                <h3 class="class_name">A</h3>
+                <div class="box_inner">
+                    <h1>茶藝興趣A班</h1>
+                    <h2>週五 下午14:00-16:00，共6堂<br>
+                        3/3、3/10、3/17、3/24、3/31、4/7</h2>
+                    <div class="price"><p style="font-size: 1.2rem; color: #3C4935;">$</p><h3 style="color: #3C4935;">8000</h3></div>            
+                </div> 
+                </a>
+                <a href="./media_page_nov.html"><img class="cart" src="./img/course_item/newcar.svg" alt="" style="width:auto; position: absolute;"></a>
+            </div> 
+            <!-- 小點&品茶 -->
+            <div style="position: relative;" class="box">
+                <a href="#" alt="" class="chosen" style="position: absolute;">
+                <h3 class="class_name">B</h3>
+                <div class="box_inner">
+                    <h1>小點&品茶</h1>
+                    <h2>週六 下午14:00-16:00，共6堂<br>
+                        4/1、4/8、4/15、4/22、4/29、5/6</h2>
+                    <div class="price"><p style="font-size: 1.2rem; color: #3C4935;">$</p><h3 style="color: #3C4935;">8000</h3></div>            
+                </div> 
+                </a>
+                <a href="./media_page_nov.html"><img class="cart" src="./img/course_item/newcar.svg" alt="" style="width:auto; position: absolute;"></a>
+            </div> 
+            <!-- 初出和風點心 -->
+            <div style="position: relative;" class="box">
+                <a href="#" alt="" class="chosen" style="position: absolute;">
+                <h3 class="class_name">C</h3>
+                <div class="box_inner">
+                    <h1>初出和風點心</h1>
+                    <h2>週三 下午14:00-16:00，共6堂<br>
+                        3/29、4/5、4/12、4/19、4/26、5/3</h2>
+                    <div class="price"><p style="font-size: 1.2rem; color: #3C4935;">$</p><h3 style="color: #3C4935;">7000</h3></div>            
+                </div> 
+                </a>
+                <a href="./media_page_nov.html"><img class="cart" src="./img/course_item/newcar.svg" alt="" style="width:auto; position: absolute;"></a>
+            </div> 
          </section>
+        <!-- 課程大綱 -->
+        <div  class="clssDetail">
+            <div class="decoLogo"></div>
+         <section id="classA">
+             <h1>經典Muko香水</h1>
+             <hr><br><br/>
+             <h2>課程大綱</h2>
+             <p>▪ 香水的調性與架構 <br>
+                學習至少50種不同的香水原物料（包括天然植物精油、原精、單體香料）的香氣個性與特質<br>
+                ▪ 嗅香訓練<br>
+                Osmothèque香氣博物館特選十多種館藏經典作品，您就算遠赴法國也不見得有機會聞到的絕跡或館藏香氛，都可以在此課程親自嗅聞！，每堂課皆會以不同的香氣鍛鍊自己的鼻子。<br>
+                ▪ 特製屬於自己的獨特魅力<br>
+                夢想版（Dreamboard）與個人香水創作，共 3 款( 30 ml )香水實作。<br>
+            – 調香師的基本功<br>
+            – 基礎香氣調性與架構<br>
+            – 常見的素材與氣味、情感的詮釋與品鑑<br>
+            – 天然/人工香水原料、香氣家族分類br
+            </p>
+            <br><br/>
+             <h2>課程須知</h2>
+             <p>1.教室工具材料齊全，課程期間將提供必要的香水原料和工具，學員無需自行準備。<br>
+                2.無須任何先備知識，歡迎所有對香水有興趣的學員參加。<br>
+                3.學員可以攜帶個人喜愛的精油或香水進行分享和討論。<br>
+                4.建議學員避免使用敏感或過敏的精油成分，以免引起不適。<br>
+                5.備有基本的安全措施和資源，學員應遵從指示並小心使用精油和其他材料。<br>
+                6.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+                </p>
+         </section>
+        </div>
          <!-- 報名按鈕 -->
-         <div></div>
+         <div id="button">
+            <a href="">立即報名</a>
+         </div>
          <!-- FAQ -->
-         <section></section>
+         <section id="faq_all">
+             <div id="faqContainer">
+                <h1>FAQ</h1>
+                <div class="faq"> 
+                    <!-- 按鈕 -->
+                    <button type="button" class="faq_btn">
+                        <span class="plus_icon"></span>
+                        <span class="minus_icon"></span>
+                    </button>
+                    <!-- 問題區 -->
+                    <div class="faqTitle">
+                        <h2>需要自己攜帶什麼物品呢?</h2>
+                    </div>
+                </div>
+                <!-- 回答問題區 -->
+                <div class="faqText">
+                        <p>基本上不需要攜帶任何物品，但歡迎攜帶陶瓷茶器，老師將會介紹數款日本茶陶的特性。
+                        如常滑燒、備前燒、龍爪梅花皮等，以及講解它們合適沖泡的茶類。</p>
+                </div> 
+                <hr>        
+             </div>
+         </section>
       </section>
 
   </main>
