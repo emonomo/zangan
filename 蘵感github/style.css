@@ -768,11 +768,12 @@ hr {
 }
 
 /* 右邊內容區塊 */
-#news .uu{
+#news .uu {
     padding: 10px;
     margin: 30px;
 
 }
+
 /* 標題列 */
 #news .nav {
     display: flex;
@@ -780,7 +781,7 @@ hr {
     align-items: center;
     width: 88%;
     position: relative;
-    padding-top:10px ;
+    padding-top: 10px;
 }
 
 /* 查看更多 */
@@ -792,7 +793,7 @@ hr {
 }
 
 /* 內容大區塊 */
-#news .kk{
+#news .kk {
     position: relative;
 }
 
@@ -818,7 +819,7 @@ hr {
 }
 
 /*活動快訊  */
-#news h2{
+#news h2 {
     line-height: 1.5rem;
 }
 
@@ -832,37 +833,47 @@ hr {
 }
 
 /* 7.media */
-#media{
+#media {
+    height: 100vh;
+}
 
+/* 上方導覽區塊 */
+#media .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
 }
 
 
+/* 標題區塊 */
+#media .nav div {
+    padding-top: 10px;
+    margin-top: 10px;
+}
 
+/* hr位置最下面 */
+#media .nav hr {
+    margin-top: 25px;
+}
 
+/* 內容大區塊 */
+#media .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 50px;
+}
 
+/* 直欄 */
+#media .main ul {}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 橫列 */
+#media .main li {
+    padding: 0 5px;
+    margin-bottom: 60px;
+}
 
 /* 8.footer */
 #footer {
@@ -872,41 +883,28 @@ hr {
     justify-content: space-around;
     align-items: center;
     margin-top: 400px;
-    /* border: solid 5px red; */
-
 }
 
 .footer_ul {
     display: flex;
-    /* justify-content: space-around;
-    align-items: center; */
-    /* border: solid 5px rgb(142, 221, 211); */
 }
 
 .footer_li {
     position: relative;
     width: 350px;
     height: 300px;
-    /* border: solid 5px rgb(206, 235, 171); */
-    /* t2 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 /* 上面列 */
-/* logo/access/contact */
 .footer_nav {
     margin: 30px 0;
 }
 
 /* 下面列 */
-/* copyright/icon_social media/QA */
 .footer_main {
-    /* position: absolute;
-    left: 0;
-    bottom: 0; */
-    /* border: solid 5px rgb(153, 191, 212); */
     margin: 30px 0;
 }
 
@@ -918,7 +916,6 @@ hr {
 
 #footer h1 {
     color: #fff;
-    ;
     font-size: 30px;
     font-family: 'Unna', serif;
 
@@ -928,3 +925,164 @@ hr {
     color: #E7E4DB;
 
 }
+
+/*----------------- signup課程報名----------------- */
+
+/* signup共用區 */
+/* 字的顏色 */
+#signup h1,
+#signup h2,
+#signup h3 {
+    color: #3C4935;
+}
+
+#signup h3{
+    font-family: 'Unna', serif;
+    /* border: solid 5px pink; */
+}
+
+#signup h4 {
+    color: #797474;
+    font-size: 14px;
+}
+
+/* signup課程報名 */
+#signup {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: solid 5px salmon; */
+}
+
+/* 整個區塊 */
+#signup .block1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px salmon;  */
+}
+/* 左半區塊 */
+#signup .dropbox {
+    /* border: solid 5px salmon; */
+}
+
+/* 上面導覽區 */
+#signup nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 240, 240, 0.3);
+    width: 80%;
+    height: 20vh;
+    margin: 20px;
+    /* border: solid 5px salmon; */
+}
+
+/* 小標題區 */
+#signup .item {
+    display: flex;
+    text-align: center;
+    margin: 90px 30px 60px 60px;
+}
+
+/* 課程或活動 :hover效果 */
+#signup .box1 h4:hover,
+#signup .box1 hr:hover {
+    color: #3C4935;
+    border-color: #3C4935;
+    background-color: #fff;
+    /* border: solid 5px salmon; */
+}
+
+/* 課程或活動/工作坊字體顏色+hr顏色 */
+#signup span h4,
+#signup span hr,
+#signup h2{
+    color: #DACFB8;
+    border-color: #DACFB8;
+    width: 200px;
+}
+
+/* 下拉選單 */
+#ccourse,
+#name {
+    display: block;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 30px;
+    border-color: #D8D8D8;
+    border-radius: 5px;
+    color: #9F9F9F;
+    border-color: #D8D8D8;
+    margin-left: 60px;
+
+}
+
+/* 加入預約清單 */
+#signup .list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*  圈圈往右箭頭 */
+#signup .list img {
+    padding-left: 10px;
+    margin-right:30px ;
+}
+
+/* 直線hr */
+#signup .vline{
+    display: flex;
+    height: 365px;
+    width: 0;
+    /* border: solid 5px salmon; */
+}
+
+/* 右邊顯示選取課程或活動 */
+#signup .nav2{
+    /* border: solid 5px salmon;  */
+}
+/* 右邊小區塊 */
+#signup .list2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 150px;
+    /* border: solid 5px rgb(191, 225, 242);  */
+}
+
+/* 清單內尚未添加課程/活動 */
+#signup .list2 h2{
+    width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
