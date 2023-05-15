@@ -442,7 +442,7 @@ h4{
         font-family: 'Noto Serif TC', serif;
         letter-spacing:  .12em;   
     }
-    /* FAQ */
+    /* FAQ
     #faq_all{
         width: 100%;
         display: flex;
@@ -489,9 +489,101 @@ h4{
         color: #797474;
     }
 /* 
-    .faqText{
-        display: none;
-    } */
+
     .minus_icon{
         display: none;
-    }
+    } */
+   
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+.container {
+  max-width: 100%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.parent-container {
+  padding: 0 20px 0 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.faq {
+  list-style: none;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+.faq li {
+  border-bottom: 1px solid #999999;
+  margin-bottom: 15px;
+}
+.faq li.active .answer {
+  max-height: 275px !important;
+  padding-bottom: 25px;
+  transition: max-height 0.5s ease, padding-bottom 0.5s ease;
+}
+.faq li.active .question {
+  color: #808080;
+  font-weight: 500;
+  transition: color 0.5s ease;
+}
+.faq .answer {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding-bottom 0.5s ease;
+}
+.faq .answer span {
+  color: #0000ff;
+  font-weight: 600;
+}
+.faq .plus-minus-toggle {
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+  left: -40px;
+  top: 50%;
+  z-index: 2; 
+}
+.faq .plus-minus-toggle:before, .faq .plus-minus-toggle:after {
+  background: #306c1f;
+  content: "";
+  height: 2px;    /* 調整+-粗度 */
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  transition: transform 500ms ease;
+}
+.faq .plus-minus-toggle:after {
+  transform-origin: center;
+}
+.faq .plus-minus-toggle.collapsed:after {
+  transform: rotate(90deg);
+}
+.faq .plus-minus-toggle.collapsed:before {
+  transform: rotate(180deg);
+}
+.faq .question {
+  color: #313131;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  padding: 20px 0;
+  transition: color 0.5s ease;
+}
+@media screen and (max-width:767px) {
+  .faq .question {
+    font-size: 18px;
+  }
+}
+.faq .question span {
+  color: #2692ff;
+}
