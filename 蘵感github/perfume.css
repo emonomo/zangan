@@ -376,6 +376,11 @@ h4{
         margin-top: 50px;
         position: relative;
     }
+    .clssDetail section{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: .3rem;
+        padding: 40px 25px;
+    }
     .decoLogo{
         background-image: url(./img/media/logo（粽色-透明度）.svg);
         background-size: 100% 100%;
@@ -442,96 +447,58 @@ h4{
         font-family: 'Noto Serif TC', serif;
         letter-spacing:  .12em;   
     }
-    /* FAQ
-    #faq_all{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-top: 150px;
-    }
-    #faqContainer h1{
-        font-size: 2.5rem;
-        font-weight: 600;
-        font-family: 'Unna', serif;
-	    letter-spacing:  .1rem;
-        margin-bottom: 30px;
-    }
-   .faq{
-        width: 1200px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .faq_btn{
-        width: 20px;
-        height: 20px;
-        margin-right: 20px;
-        display: flex;
-        align-items: center;
-        padding: 2px;
-        border: none;
+    /* FAQ*/
 
-        background-color: #fff;
-    }
-    .plus_icon{
-        background-image: url(./img/course_item/faq_plus.svg);
-        background-size: 100% 100%;
-        display: block;
-        width: 20px;
-        height: 20px;
-    }
-    .minus_icon{
-        background-image: url(./img/course_item/faq_minus.svg);
-        background-size: 100% 100%;
-    }
-    .faqText{
-        margin-left: 40px;
-        color: #797474;
-    }
-/* 
-
-    .minus_icon{
-        display: none;
-    } */
-   
- @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
-.container {
+.faq_box {
   max-width: 100%;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
+  margin-top: 80px;
+  padding-bottom: 80px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  display: flex;
+  justify-content: center;
 }
 
 .parent-container {
-  padding: 0 20px 0 20px;
-  max-width: 800px;
-  width: 100%;
+  max-width: 1000px;
+  width: 100%; 
 }
+.parent-container h1{
+    font-size: 2.5rem; 
+    font-weight: 600; 
+    font-family: 'Unna', serif; 
+    letter-spacing:  .1rem; 
+    margin-bottom: 30px;   
+}
+
 
 .faq {
   list-style: none;
-  padding-left: 40px;
-  padding-right: 20px;
+  padding-left: 55px;
 }
 .faq li {
   border-bottom: 1px solid #999999;
   margin-bottom: 15px;
 }
+
+.faq .question{
+    padding: 6px;
+}
+/* .faq h3:hover{
+    background-color: #DACFB8;
+} */
+
 .faq li.active .answer {
   max-height: 275px !important;
   padding-bottom: 25px;
   transition: max-height 0.5s ease, padding-bottom 0.5s ease;
 }
 .faq li.active .question {
-  color: #808080;
+  color: #9B8256;
   font-weight: 500;
   transition: color 0.5s ease;
 }
 .faq .answer {
-  color: #000;
-  font-family: "Montserrat", sans-serif;
+  color: #1D201D;
   font-weight: 300;
   line-height: 24px;
   max-height: 0;
@@ -548,37 +515,39 @@ h4{
   position: absolute;
   width: 20px;
   left: -40px;
-  top: 50%;
+  top: 48%;
   z-index: 2; 
 }
 .faq .plus-minus-toggle:before, .faq .plus-minus-toggle:after {
-  background: #306c1f;
+  background: #9B8256;
   content: "";
   height: 2px;    /* 調整+-粗度 */
   left: 0;
   position: absolute;
   top: 0;
-  width: 20px;
+  width: 18px;
   transition: transform 500ms ease;
 }
 .faq .plus-minus-toggle:after {
   transform-origin: center;
 }
 .faq .plus-minus-toggle.collapsed:after {
+    background-color: #3C4935;
   transform: rotate(90deg);
 }
 .faq .plus-minus-toggle.collapsed:before {
+    background-color: #3C4935;
   transform: rotate(180deg);
 }
 .faq .question {
-  color: #313131;
-  font-family: "Montserrat", sans-serif;
+  color: #3C4935;
   font-weight: 600;
   position: relative;
   cursor: pointer;
   padding: 20px 0;
   transition: color 0.5s ease;
 }
+
 @media screen and (max-width:767px) {
   .faq .question {
     font-size: 18px;
