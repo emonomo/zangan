@@ -148,7 +148,7 @@ h4{
   text-align: left;
   width: 100%;
   height: 700px; 
-  background-color: #b8b8b8;
+  background-color: #fff;
   margin: 0;
 }
 
@@ -176,14 +176,117 @@ h4{
 
    /* 遮罩加輪播 */
     #marquee{
-        background-color: #3C4935;
+        width:100%;
+        height: 350px;  
+        /* background-color: #3C4935; */
         margin: 5px 0;
+        display: flex;
+        position: relative;
     }
 
-    #marquee img{
+    #marquee .mask{
+        z-index: 300;
         width: 490px;
         height: 350px;  
     }
+    #marquee .pic-container{
+       width: 100%;
+    }
+    #marquee .view {
+    overflow: hidden;
+    width: 100%; 
+    position: absolute;
+}
+    .randomPic img{
+        height: 350px;
+        width: auto;  /* 100% 寬度才不會有問題*/
+       
+     
+    }
+    /* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: inherit;
+  list-style: none;
+} */
+
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e8e8e8;
+} */
+
+/* marquee 輪播 */
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 1024px) {
+  @-webkit-keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-125%);
+    }
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-125%);
+    }
+  }
+}
+@media (max-width: 768px) {
+  @-webkit-keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-166.65%);
+    }
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-166.65%);
+    }
+  }
+}
+
+#marquee .pic-container {
+  display: flex;
+  -webkit-animation: marquee 40s infinite linear;
+          animation: marquee 10s infinite linear;
+}
+#marquee .pic-container .randomPic{
+  flex-basis:20%;
+  flex-shrink: 0;
+}
+@media (max-width: 1024px) {
+  #marquee .pic-container .randomPic{
+    flex-basis: 25%;
+  }
+}
+@media (max-width: 768px) {
+  #marquee .pic-container .randomPic{
+    flex-basis: 33.33%;
+  }
+}
+/* ------------------------------------------- */
+
     /* 師資介紹  */
     #teacher{
         background-color: #DACFB8;
