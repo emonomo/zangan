@@ -90,6 +90,14 @@ h4{
 	font-weight: 500;
     font-size: .75rem;
 }
+/* 新增main置中 */
+main{
+	width: 100%;
+    display: flex;
+    justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
 /*-----------------------------------------------------------*/
 /* 頁首區 */
 #topbar{
@@ -137,19 +145,18 @@ h4{
    justify-content: center;
    align-items: center;
 }
+
+
+
 /* 內容區  */
 
+
+
 #caption {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-}
-#caption div{
+	margin: 50px 0;
     width: 1000px;
     display: flex;
-    flex-direction: column;
-   
+    flex-direction: column; 
     align-items: center;
 }
 #caption h1{
@@ -158,4 +165,26 @@ h4{
 .mainTitle{
 	font-size: 1.8rem;
 	margin: 35px 0 45px;
+}
+
+/* <!-- 理念區 --> */
+#ourContent{
+	display: flex;
+	margin-top: 80px;
+}
+.pictures{
+	width: 30%;
+}
+.text{
+	/* padding: 70px 250px 50px 360px; */
+	width: 70%;
+	height: 445px;
+	display: flex;
+	border: 2px solid #DACFB8;
+	text-align: justify;
+}
+.text_box{
+	margin: 100px 260px 40px 400px;
+	display: flex;
+	text-align: justify;
 }
