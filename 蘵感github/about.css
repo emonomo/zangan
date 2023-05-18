@@ -188,3 +188,102 @@ main{
 	display: flex;
 	text-align: justify;
 }
+/* <!-- 圖片列 --> */
+
+#teachPic{
+	width: 85%;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	margin-top: 125px;
+}
+
+.rowTop{
+	display: flex;
+}
+
+#teachPic h2{
+	display: flex;
+    align-items: center;
+	width: 40%;
+	padding: 0 60px;
+}
+.picline{
+	width: 60%;
+	height: 265px;
+	background-color: antiquewhite;
+}
+
+.rowDown{
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: 35px;
+}
+
+/* <!-- 跑馬燈 --> */
+img {
+	width: 100px;
+  }
+  .marquee {
+	position: relative;
+	width: 100vw;
+	height: 50px;
+	background-color: #DACFB8;
+	display:flex;
+	align-items: center;
+	margin-bottom: 70px;
+	overflow: hidden; 
+	
+  }
+  .marquee .box {	
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	/* overflow: hidden; */
+  }
+
+  .marquee .view {
+    overflow: hidden;
+	display: flex;
+	align-items: center;
+    width: 100%; 
+	height: 50px;
+
+  }
+
+  .marquee .box:hover {
+	animation-play-state: paused;
+  }
+  /* .marquee span {
+	float: left;
+	width: 80%;
+  }
+   */
+  @keyframes marquee {
+	0% {
+	  transform: translateX(0);
+	}
+	100% {
+	  transform: translateX(-100%);
+	}
+  }
+
+  .marquee .box {
+	-webkit-animation: marquee 40s infinite linear;
+			animation: marquee 20s infinite linear;
+  }
+ .marquee .box img{
+	flex-basis:20%;
+	flex-shrink: 0;
+  }
+  @media (max-width: 1024px) {
+	.marquee .box img{
+	  flex-basis: 24%;
+	}
+  }
+  @media (max-width: 768px) {
+	.marquee .box img{
+	  flex-basis: 33.33%;
+	}
+  }
