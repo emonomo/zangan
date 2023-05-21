@@ -1,3 +1,8 @@
+
+
+
+
+
 // <!-- FAQ -->
 // Toggle Collapse
 $('.faq li .question').click(function () {
@@ -5,3 +10,4 @@ $('.faq li .question').click(function () {
 	$(this).parent().toggleClass('active');
   });
   
+

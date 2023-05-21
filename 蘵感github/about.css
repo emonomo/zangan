@@ -182,14 +182,17 @@ body {
 .text{
 	/* padding: 70px 250px 50px 360px; */
 	width: 70%;
-	height: 445px;
-	display: flex;
+	height: 60vh;
 	border: 2px solid #DACFB8;
-	text-align: justify;
-}
-.text_box{
-	margin: 100px 260px 40px 400px;
 	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.text h2{
+	width: 53%;
+	margin-left: 50px;
+	display: block;
 	text-align: justify;
 }
 /* <!-- 圖片列 --> */
@@ -210,7 +213,7 @@ body {
 	display: flex;
     align-items: center;
 	width: 40%;
-	padding: 0 100px;
+	margin: 0 100px;
 }
 .picline{
 	width: 60%;
@@ -235,7 +238,7 @@ img {
 	background-color: #DACFB8;
 	display:flex;
 	align-items: center;
-	margin-bottom: 70px;
+	margin-bottom: 100px;
 	overflow: hidden; 
 	
   }
@@ -291,6 +294,7 @@ img {
 	  flex-basis: 33.33%;
 	}
   }
+
   /* <!-- contact --> */
 #contact{
 	width: 60%;
@@ -301,7 +305,7 @@ img {
 	font-size: 2.8rem;
     font-weight: 700;
     letter-spacing: .1rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .info h3::after{
 	content: "";
@@ -309,17 +313,112 @@ img {
 	height: 1px;
 	display: block;
 	background-color: #3C4935;
+	margin: 6px 0 5px 0;
 }
 .info{
-	height: 60vh;
-	align-items: flex-start;
+	height: 70vh;
   }
+  /* access */
+
+  .access_box{
+	display: flex;
+	margin-top: 40px;
+  }
+
+.location{
+	flex: 60%;
+	display: flex;
+    align-items: flex-end;
+}
+.location div{
+		display: block;
+		margin-left: 100px;
+}
+ 
+
+ 
+/* contact */
+
+  /* 切版面大區塊 */
+ .info form{
+	display: flex;
+	margin-top: 20px;
+ }
+ .form_left , .form_right{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-left: 130px;
+ }
+ .form_left{
+	 margin-left: 40px;
+ }
+
+
+/* 表單樣式設定 */
+
+::placeholder{
+	font-size: .8rem;
+	color: #969696;
+}
+
+#message_form input,#message_form textarea{
+	font-size: 1rem;
+	padding: 10px 15px;
+	background-color: rgba(231, 228, 219, .3);  /*顏色的最後一項是透明度*/
+	border:1px solid rgba(255, 255, 255,0.1); /*改變input邊框的預設樣式*/
+	/*寫了兩個不同方位的陰影*/
+	box-shadow: inset -1px -1px 1px rgba(255, 255, 255,0.5), 1px 1px 5px rgba(2, 2, 2,0.2);
+}
+
+#message_form input:focus,#message_form textarea:focus{
+	outline: none;
+	border: 1px solid #3C4935;
+    background-color: rgba(231, 228, 219, .5);
+}
+
+#message_form textarea {
+	font-size: 1rem;
+	height: 9rem; /*對應字級高度(0.85*想要(5)行)*/
+}
+
+#message_form label{
+   margin: 40px 0 20px;
+   letter-spacing: .2rem;
+   color: #5C5C5C;
+   font-weight: 500;
+   font-size: .9rem;
+}
+
+#contact small{
+	color: rgb(161, 161, 161);
+	margin-top: 15px;
+	font-size: .8rem;
+	text-align: center;
+ }
+ #message_form button{
+	 height: 40px;
+	 font-size: .9rem;
+	 color: #3C4935;
+	 background-color: #fff;
+	 border: 1px solid #3C4935;
+
+	 justify-content: center;
+	 align-items: center; 
+	 cursor: pointer;   /*游標樣式: 手型*/
+	 margin-top: 30px;
+ }
+ #message_form button:hover{
+	color: #fff;
+	background-color: #3C4935;
+	border: 1px solid #3C4935;
+ }
 
 
   /* FAQ */
   .faq_box {
 	max-width: 100%;
-	margin-top: 80px;
+	margin-top: 45px;
 	padding-bottom: 80px;
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
 	display: flex;

@@ -1,3 +1,19 @@
+//<!-- 長期短期選擇 -->
+
+var marker = document.querySelector('#select .marker');
+var item = document.querySelectorAll('#select nav a');
+
+function indicator(e){
+marker.style.left = e.offsetLeft+"px";
+marker.style.width = e.offsetWidth+"px";
+}
+
+item.forEach(Link => {
+	Link.addEventListener('click',(e)=>{
+	indicator(e.target);
+  })
+})
+
 // <!-- FAQ -->
 // Toggle Collapse
 $('.faq li .question').click(function () {

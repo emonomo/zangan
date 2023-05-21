@@ -51,7 +51,6 @@
                 </div>
             </div>
             <div class="text">
-                <div class="text_box">
                 <h2>
                 「蘵感」是一個專注於美學生活手作的品牌。<br>
                 我們相信手作藝術可以讓人們從日常瑣事中解放出來，並在創作中找到心靈的寧靜。我們的課程涵蓋了各種不同的手作技能，讓您可以從中發掘自己喜愛的興趣，並將其融入到自己的生活中。
@@ -60,7 +59,6 @@
                 由創辦者親自設計的交誼空間，注重細節與氛圍的打造，讓您能夠放鬆休憩並結交志同道合的朋友。課程之餘，您可以和夥伴們一起到吧台品嚐手沖咖啡，或是隨意找個舒適的沙發窩著發呆。
                 不論以什麼形式，相信您能在此度過一段輕鬆愉快的時光。
                 </h2>
-               </div>
            </div>
         </section>
     <!-- 圖片列 -->
@@ -109,20 +107,52 @@
     <!-- CONTACT -->
     <section id="contact">
        <div class="info">
-            <h3>Access</h3>
-            <div>
-                <div class="map"></div>
-                <div class="location"></div>
+            <h3>Access</h3> 
+            <div class="access_box">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1074.6013053912216!2d121.51862211277742!3d25.05057768447596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96c49f1e473%3A0xb4f74ae9ed21c1fb!2z5Y-w5YyX55W25Luj6Jed6KGT6aSo!5e0!3m2!1szh-TW!2sus!4v1684566887614!5m2!1szh-TW!2sus" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="location"> 
+                    <div>
+                     <h2>32462</h2>
+                     <h2>台北市枕頭村乃貓巷第一個盆栽下 3F</h2>
+                       <br>
+                       <h2><span>電話號碼  03-9926363</span></h2> 
+                       <h2><span>營業時間  10:30-20:00</span></h2> 
+                       <h2><span>公休日 &nbsp &nbsp星期二/三 (國定假期)</span></h2> 
+                     </div>
+                </div>
             </div>
         </div>
        <div class="info">
             <h3>Contact</h3>
-            <div>
-                <div class="form"></div>
-            </div>
+            <p> 歡迎填表單聯絡我們，將會盡快回覆!</p>
+            <form name="member_mod_form" id="message_form" action="" method="post">
+                <div class="form_left">    
+                    <label for="username">姓名:</label>
+                    <input type="text" id="username" name="username" title="請輸入真實姓名" maxlength="10" minlength="2" required autocomplete="on" autofocus>
+                    <!-- 使用title 導讀機 會念出來(視障無障礙) -->
+                    <label for="*email">Email:</label>
+                    <input type="email" id="email" name="email" title="請輸入Email" placeholder="youid@email.com"  required autocomplete="on">
+                
+                    <label for="tel">連絡電話:</label>
+                    <input type="tel" id="tel" name="tel"  title="請輸入電話"  autocomplete="on">
+                </div>
+                <div class="form_right">
+                    <label for="massage">請問您想說什麼呢?</label>
+                    <textarea name="massage" id="massage" cols="50" rows="20"  title="歡迎留言"  required ></textarea>
+                    <button type="submit">
+                        <span>送出</span>
+                     </button>
+                      
+                    <small>(此表單為網頁功能展示，無實際蒐集資料之功能)</small>
+                </div> 
+            </form>
+                
        </div>
        <div class="info">
         <h3>FAQ</h3>
+        <p> 一些常見的問題，提供參照。</p>
         <div class="faq_box">
             <div class="parent-container">
               <ul class="faq">
