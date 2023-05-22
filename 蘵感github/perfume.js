@@ -1,7 +1,7 @@
 //<!-- 長期短期選擇 -->
 
-var marker = document.querySelector('#select .marker');
-var item = document.querySelectorAll('#select nav a');
+var marker = document.querySelector('#chose .marker');
+var item = document.querySelectorAll('#chose nav a');
 
 function indicator(e){
 marker.style.left = e.offsetLeft+"px";
