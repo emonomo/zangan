@@ -10,9 +10,16 @@ marker.style.width = e.offsetWidth+"px";
 
 item.forEach(Link => {
 	Link.addEventListener('click',(e)=>{
+		e.preventDefault();
+		indicator(e.target);
+	});
+})
+/* 
+item.forEach(Link => {
+	Link.addEventListener('click',(e)=>{
 	indicator(e.target);
   })
-})
+})*/
 
 // <!-- FAQ -->
 // Toggle Collapse
