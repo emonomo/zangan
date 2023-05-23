@@ -204,13 +204,12 @@ h4{
 
     #marquee .view {
         overflow: hidden;
-        width: 128%; 
+        width: 126%; 
         position: absolute;
     }
     .randomPic{
       display: flex;
-      margin-right: 10px;
-      /* width: 480px;
+          /* width: 480px;
       height: 350px;   */
     }
     .randomPic img{
