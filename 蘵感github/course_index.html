@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>course_index</title>
-
+    <link rel="stylesheet" href="./course_carousel.css">     <!-- codepen carousel -->
+    <!-- 自訂的css一定要放在最下面，權重最重 -->
     <link rel="stylesheet" href="./course_index.css">
+
     
 
 </head>
@@ -39,17 +41,26 @@
 <!-- 內容區 -->
     <main>
         <!-- image caroisel 工作坊輪播區 -->
-        <section id="carousel">
-            <div id ="carousel_words">
-                 <div>
+        <section id="carousel" class="-no-transition-delay">
+            <!-- 輪播1 -->
+            <div class="pageslider__slide"><img src="./img/course/course_banner.png" alt="">
+              <div class ="carousel_words">
+                    <div>
                     <img src="./img/course/corurse_date_white.svg" alt="" >
                     <h1> 迷你多肉植栽 </h1>   
                     <h2>製作屬於自己的小盆景! <br> 
                         不怕綠魔手，僅須偶爾噴灑水分 <br> 
                         就能使療癒的森林世界生生不息。</h2>
                        <a href="#">查看更多</a>
-                 </div> 
-        </div>
+                   </div> 
+               </div>
+            </div>
+             <!-- 輪播2 -->
+
+
+
+
+
          </section>
 
         </section>
@@ -73,7 +84,7 @@
          <article id="courseAll">
             <div class="container">
                 <section class = "perfume">
-                    <img src="./img/course/course_perfume.png" alt="">
+                    <img  data-speed="-0.75" class="img-parallax" src="./img/course/recourse_perfume.jpg" alt="">
                     <div>
                        <h1> 香水特製Lab</h1>
                        <h2>它飄散在空氣中，像是一縷縷的音符，讓人為之迷醉，沉浸在它的魅力之中。</h2>
@@ -82,7 +93,7 @@
                   </section>
                    <!-- 改id就壞掉 -->
                   <section class = "draw">  
-                      <img src="./img/course/course_draw.jpg" alt="">
+                      <img  data-speed="-0.75" class="img-parallax" src="./img/course/recourse_draw.jpg" alt="">
                       <div class="left">
                          <h1> 自由繪畫</h1>
                          <h2>油彩隨意流轉，顏料在空中舞蹈，
@@ -91,7 +102,7 @@
                       </div>               
                     </section>
                     <section class = "flower">  
-                      <img src="./img/course/course_flower.jpg" alt="">
+                      <img  data-speed="-0.75" class="img-parallax" src="./img/course/recourse_flower.jpg" alt="">
                       <div>
                          <h1> 藝術插花</h1>
                          <h2>手捧著一簇簇鮮花，繚繞出陣陣幽香，插花成曲，點綴您的生命，在自然的美中，尋找自己的真實。</h2>
@@ -99,7 +110,7 @@
                       </div>               
                     </section>
                     <section class = "diy">  
-                      <img src="./img/course/course_diy2.jpg" alt="">
+                      <img  data-speed="-0.75" class="img-parallax" src="./img/course/recourse_diy2.jpg" alt="">
                       <div class="left">
                          <h1> 創意手作</h1>
                          <h2>每個線頭都是一段記憶的起點。生命的疏密交錯，編織成永恆的歌；讓寒風不再肆虐，溫暖永不褪色。</h2>
@@ -107,7 +118,7 @@
                       </div>               
                     </section>
                     <section class = "tea">  
-                      <img src="./img/course/course_tea.jpg" alt="">
+                      <img  data-speed="-0.75" class="img-parallax" src="./img/course/recourse_tea.jpg" alt="">
                       <div>
                          <h1> 小點茶藝工坊</h1>
                          <h2>茶香四溢，馥郁芬芳。喉間苦澀想必沒有生活苦澀，甘甜的滋味久久不散，耐人尋味。</h2>
@@ -136,5 +147,10 @@
     <footer>
 
     </footer>
+     <!-- 視差 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <!-- 輪播 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js'></script>
+    <script src="./course_index.js"></script>
 </body>
 </html>
