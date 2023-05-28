@@ -10,7 +10,6 @@
 
 </head>
 <body>
-<script src="./perfume.js"></script>
 <!-- header -->
 <header id="topbar">
     <nav>
@@ -112,8 +111,8 @@
          <!-- 課程選項 -->
          <section id="list">
             <!-- 茶藝興趣A班 -->
-            <div class="chosen">
-               <a href="#" alt=""  class="detail">
+            <div class="chosen" onclick=" changeBackground('A')" id="A"  style="background-image: url('./img/course_item/block_click.svg')">
+               <a href="#" alt=""  class="detail"  onclick="changeClassA()">
                     <h3 class="class_name">A</h3>
                     <div class="box_inner"> 
                         <h1>茶藝興趣A班</h1>
@@ -126,8 +125,8 @@
             </div>
             
              <!-- 小點&品茶 -->
-                <div class="chosen">
-                    <a href="#" alt=""  class="detail">
+                <div class="chosen"  onclick=" changeBackground('B')" id="B">
+                    <a href="#" alt=""  class="detail"  onclick="changeClassB()">
                          <h3 class="class_name">B</h3>
                          <div class="box_inner"> 
                              <h1>小點&品茶</h1>
@@ -141,8 +140,8 @@
                
             <!-- 初出和風點心 -->
 
-            <div class="chosen">
-                <a href="#" alt=""  class="detail">
+            <div class="chosen" onclick=" changeBackground('C')" id="C">
+                <a href="#" alt=""  class="detail"  onclick="changeClassC()">
                      <h3 class="class_name">C</h3>
                      <div class="box_inner"> 
                          <h1>初出和風點心</h1>
@@ -155,6 +154,7 @@
              </div>           
          </section>
         <!-- 課程大綱 -->
+        <!-- classA -->
         <div  class="clssDetail">
             <div class="decoLogo"></div>
          <section id="classA">
@@ -182,6 +182,56 @@
                 6.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
                 </p>
          </section>
+         <section id="classB" style="display: none;">
+            <h1>我是B</h1>
+            <hr><br><br/>
+            <h2>課程大綱</h2>
+            <p>▪ 香水的調性與架構 <br>
+               學習至少50種不同的香水原物料（包括天然植物精油、原精、單體香料）的香氣個性與特質<br>
+               ▪ 嗅香訓練<br>
+               Osmothèque香氣博物館特選十多種館藏經典作品，您就算遠赴法國也不見得有機會聞到的絕跡或館藏香氛，都可以在此課程親自嗅聞！，每堂課皆會以不同的香氣鍛鍊自己的鼻子。<br>
+               ▪ 特製屬於自己的獨特魅力<br>
+               夢想版（Dreamboard）與個人香水創作，共 3 款( 30 ml )香水實作。<br>
+           – 調香師的基本功<br>
+           – 基礎香氣調性與架構<br>
+           – 常見的素材與氣味、情感的詮釋與品鑑<br>
+           – 天然/人工香水原料、香氣家族分類br
+           </p>
+           <br><br/>
+            <h2>課程須知</h2>
+            <p>1.教室工具材料齊全，課程期間將提供必要的香水原料和工具，學員無需自行準備。<br>
+               2.無須任何先備知識，歡迎所有對香水有興趣的學員參加。<br>
+               3.學員可以攜帶個人喜愛的精油或香水進行分享和討論。<br>
+               4.建議學員避免使用敏感或過敏的精油成分，以免引起不適。<br>
+               5.備有基本的安全措施和資源，學員應遵從指示並小心使用精油和其他材料。<br>
+               6.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+               </p>
+        </section>
+        <section id="classC" style="display: none;">
+            <h1>JI3G4</h1>
+            <hr><br><br/>
+            <h2>課程大綱</h2>
+            <p>▪ 香水的調性與架構 <br>
+               學習至少50種不同的香水原物料（包括天然植物精油、原精、單體香料）的香氣個性與特質<br>
+               ▪ 嗅香訓練<br>
+               Osmothèque香氣博物館特選十多種館藏經典作品，您就算遠赴法國也不見得有機會聞到的絕跡或館藏香氛，都可以在此課程親自嗅聞！，每堂課皆會以不同的香氣鍛鍊自己的鼻子。<br>
+               ▪ 特製屬於自己的獨特魅力<br>
+               夢想版（Dreamboard）與個人香水創作，共 3 款( 30 ml )香水實作。<br>
+           – 調香師的基本功<br>
+           – 基礎香氣調性與架構<br>
+           – 常見的素材與氣味、情感的詮釋與品鑑<br>
+           – 天然/人工香水原料、香氣家族分類br
+           </p>
+           <br><br/>
+            <h2>課程須知</h2>
+            <p>1.教室工具材料齊全，課程期間將提供必要的香水原料和工具，學員無需自行準備。<br>
+               2.無須任何先備知識，歡迎所有對香水有興趣的學員參加。<br>
+               3.學員可以攜帶個人喜愛的精油或香水進行分享和討論。<br>
+               4.建議學員避免使用敏感或過敏的精油成分，以免引起不適。<br>
+               5.備有基本的安全措施和資源，學員應遵從指示並小心使用精油和其他材料。<br>
+               6.學員可以攜帶筆記本和記錄工具，以便記錄課程內容和個人感受。<br>
+               </p>
+        </section>
         </div>
          <!-- 報名按鈕 -->
          <div id="button">
@@ -243,7 +293,8 @@
           </div>
       </section>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./perfume.js"></script>
-  </main>
+      <script src="./perfume.js"></script>
+    </main>
   <footer></footer>
 
 </body>
