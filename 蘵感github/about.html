@@ -45,11 +45,30 @@
         </section>
     <!-- 理念區 -->
         <section id="ourContent">
-            <div class="pictures">
-                <div class="img_box">
-                    <!-- 放入圖片輪播 -->
+               <div class="pictures">
+                    <div class="card-swiper">
+                          <div class="card-group">
+                                <!-- <div class="little-card card">
+                        
+                                </div> -->
+                                
+                                <div class="big-card card"> </div>
+                                <!-- <div class="little-card card">
+                        
+                                </div> -->
+                                <div class="big-card card"></div>
+                                <!-- <div class="little-card card">
+                        
+                                </div> -->
+                                <div class="big-card card"></div>
+                                <!-- <div class="little-card card">
+                        
+                                </div> -->
+                                <div class="big-card card"></div>
+                            
+                           </div>
+                       </div>
                 </div>
-            </div>
             <div class="text">
                 <h2>
                 「蘵感」是一個專注於美學生活手作的品牌。<br>
@@ -64,20 +83,22 @@
     <!-- 圖片列 -->
         <section id="teachPic">
             <div class="rowTop">
-                <h2>舉辦各種快閃工作坊、活動，廣邀各個領域的藝術家、工藝師授課，以美學的不同角度切入，開闊了彼此對日常生活的視野。</h2>
+                <h2 class="smoove_2" data-move-x="400px" data-move-z="-800px">
+                    舉辦各種快閃工作坊、活動，廣邀各個領域的藝術家、工藝師授課，以美學的不同角度切入，開闊了彼此對日常生活的視野。</h2>
                <div class="picline">
-                 <img src="" alt="">
-                 <img src="" alt="">
-                 <img src="" alt="">
+                 <img class="smoove" data-move-x="500px" src="./img/about/imageboxRight_1.jpg" alt="">
+                 <img class="smoove" data-move-x="600px" src="./img/about/imageboxRight_2.jpg" alt="">
+                 <img class="smoove" data-move-x="700px" src="./img/about/imageboxRight_3.jpg" alt="">
                </div>
             </div>
        
             <div class="rowDown">
-                <h2>參與各種多樣的活動，與來自不同地方、職業的朋友相遇。在這個熱鬧的聚集地，您可以跨越與平時生活毫無交集的平行線，結交新朋友，體驗不同的人生觀和文化風情。</h2>
+                <h2 class="smoove_2" data-move-x="-400px" data-move-z="-800px">
+                    參與各種多樣的活動，與來自不同地方、職業的朋友相遇。在這個熱鬧的聚集地，您可以跨越與平時生活毫無交集的平行線，結交新朋友，體驗不同的人生觀和文化風情。</h2>
                 <div class="picline">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img class="smoove" data-move-x="-500px" src="./img/about/imageboxLeft_1.jpg" alt="">
+                    <img class="smoove" data-move-x="-600px"  src="./img/about/imageboxLeft_2.jpg" alt="">
+                    <img class="smoove" data-move-x="-700px" src="./img/about/imageboxLeft_3.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -130,7 +151,7 @@
             <form name="member_mod_form" id="message_form" action="" method="post">
                 <div class="form_left">    
                     <label for="username">姓名:</label>
-                    <input type="text" id="username" name="username" title="請輸入真實姓名" maxlength="10" minlength="2" required autocomplete="on" autofocus>
+                    <input type="text" id="username" name="username" title="請輸入真實姓名" maxlength="10" minlength="2" required autocomplete="on" >
                     <!-- 使用title 導讀機 會念出來(視障無障礙) -->
                     <label for="*email">Email:</label>
                     <input type="email" id="email" name="email" title="請輸入Email" placeholder="youid@email.com"  required autocomplete="on">
@@ -192,6 +213,8 @@
  <!-- 頁尾區 -->
     <footer></footer>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+         <!-- jQuery Smoove -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
     <script src="./about.js"></script>
 </body>
 </html>
