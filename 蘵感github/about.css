@@ -216,6 +216,7 @@ body {
 .card-group {
   position: absolute;
   transition: transform 400ms ease;
+  transition-delay: 300ms;
 }
 
 /* .card-group[data-status="unknown"] {
@@ -344,16 +345,19 @@ body {
   .big-card:nth-child(1) {
 	background-image: url("./img/about/imagebox\ Large\ 4.jpg");
 	transform: translateX(-10%) rotate(-12deg);
+	opacity: 0.4;
   }
   
   .big-card:nth-child(2) {
 	background-image: url("./img/about/imagebox\ Large\ 3.jpg");
 	transform: translate(-5%, -7%) rotate(-5deg);
+	opacity: 0.5;
   }
   
   .big-card:nth-child(3)  {
 	background-image: url("./img/about/imagebox\ Large\ 2.jpg");
 	transform: translateX(-6%) rotate(-3deg);
+	opacity: 0.7;
   }
   
   .big-card:nth-child(4)  {
@@ -388,17 +392,21 @@ body {
   }
 
   .card-group.animating > .big-card:nth-child(3) {
-	transform: translateX(-6%) rotate(-3deg);
+	transform: translate(25%, 10%) rotate(8deg);
   }
 
   .card-group.animating > .big-card:nth-child(4){
-	transform: translate(10%, 3%) rotate(5deg);
+	transform: translate(75%, 16%) rotate(24deg);
+	opacity: 0.8;
   }
 
   .card-group.animating >.big-card:hover{
     transform: translateY(-10%);
 	z-index: 80;
+	opacity: 1;
   }
+
+
 
 /*
 .little-card:nth-child(1) {
