@@ -36,6 +36,7 @@ let flkty = new Flickity(".main-carousel", {
     } } });
 
 
+
 // 視差效果
 $('.img-parallax').each(function(){
     var img = $(this);
@@ -73,3 +74,14 @@ $('.img-parallax').each(function(){
       }
     });
   });
+
+// 跑出來標籤
+$(function(){
+  //動態增加類別(addClass)
+  $('.container section').hover(function(){
+      $('.container section div').addClass('imgScale');
+  }, function(){
+  //動態移除類別(removeClass)
+      $('.container section div').removeClass('imgScale');
+  });
+});
