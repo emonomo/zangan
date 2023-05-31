@@ -1,4 +1,14 @@
 // 換圖輪播
+
+// $('.main-carousel').flickity({
+//   // options
+//   cellAlign: 'left',
+//   autoPlay: 5000,
+//   wrapAround: true
+// });
+
+
+
 const AUTOPLAY_CLASS = "slider--autoplay";
 
 // Remove autoplay class on stop
@@ -7,7 +17,7 @@ Flickity.prototype.stopPlayer = function () {
   this.element.classList.remove(AUTOPLAY_CLASS);
 };
 
-let flkty = new Flickity("#carousel", {
+let flkty = new Flickity(".main-carousel", {
   autoPlay: 6000,
   prevNextButtons: true,
   pageDots: true,

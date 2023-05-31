@@ -143,23 +143,16 @@ h4{
 
 /* 內容區  */
     /* image caroisel 工作坊輪播區 */
-		
-	#carousel{
-		width: 100%;
-		height: 450px;
-		
-	}
-	.pageslider__slide img{
-		height: 450px;
-		object-fit: cover;
-		position: relative;
-	}
 
-	
-    
-	 .pageslider__slide{
-		height: auto;
-		display: flex;
+
+	.carousel-cell img{
+		width: 100%; /* full width */
+		height: 450px;
+	}
+	 .carousel-cell{
+		width: 100%; /* full width */
+		height: 450px;
+
 		position: relative;
 	}
 	.carousel_words{

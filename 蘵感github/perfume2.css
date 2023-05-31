@@ -569,6 +569,11 @@ body {
         font-family: 'Noto Serif TC', serif;
         letter-spacing:  .12em;   
     }
+    #button a:hover{
+      background-color: #3C4935;
+      color: #fff;
+    }
+
     /* FAQ*/
 
 .faq_box {
