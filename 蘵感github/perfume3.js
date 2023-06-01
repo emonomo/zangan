@@ -1,3 +1,8 @@
+// <!-- 師資的動畫 -->
+$('.smoove_3').smoove({
+	offset:'20%',
+ });
+
 //<!-- 長期短期選擇 -->
 
 // var marker = document.querySelector('#chose .marker');
@@ -16,12 +21,6 @@
 // })
 
 // -----------------------------------------
-/* 
-item.forEach(Link => {
-	Link.addEventListener('click',(e)=>{
-	indicator(e.target);
-  })
-})*/
 function line() {
 	var w = 0;
 	$('#chose ul > li').each(function(index) {
@@ -38,8 +37,7 @@ $(function() {
 
 $('span').on('click', function() {
 	$('li').removeClass('active');
-	$(this).parent().addClass('active');
-	
+	$(this).parent().addClass('active');	
 	line();
 });
 //<!-- 課程切換選項 -->
