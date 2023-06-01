@@ -796,3 +796,24 @@ body {
 .faq .question span {
   color: #2692ff;
 }
+
+/* <!-- go top --> */
+#gotop{
+	position: fixed;
+	cursor: pointer; /* 手型 */ 
+	
+	right: 20px;
+	bottom: 20px;
+	width: 50px;
+	height: 80px;
+	z-index: 999;
+	background-color: rgba(60, 73, 53, 0.5);
+	border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#gotop img{
+  width: 85%;
+}
