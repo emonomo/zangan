@@ -177,7 +177,7 @@ body {
 	margin-top: 80px;
 }
 .pictures{
-	width: 40%;
+	width: 30%;
 	display: flex;
     justify-content: flex-end;
 	align-items: center;
@@ -195,7 +195,7 @@ body {
 
 .text h2{
 	width: 53%;
-	margin-left: 50px;
+	margin-left: 16%;
 	display: block;
 	text-align: justify;
 }
@@ -210,7 +210,7 @@ body {
 .card-swiper,
 .card-group,
 .big-card {  
-  width: 38%;
+  width: 40%;
 }
 
 .card-group {
@@ -383,6 +383,10 @@ body {
 	transform: translate(-280%, 140%) rotate(-15deg);
   } */
 
+  .card-group.animating > *{
+	transition-duration:1.5s;
+  }
+
   .card-group.animating > .big-card:nth-child(1) {
 	transform: translate(-95%, 16%) rotate(-24deg);
   }
@@ -401,7 +405,9 @@ body {
   }
 
   .card-group.animating >.big-card:hover{
-    transform: translateY(-10%);
+    transform: translateY(-10%) scale(115%);
+	box-shadow: -10px 6px 10px rgba(29, 32, 29,0.3);
+	transition-duration:1s;
 	z-index: 80;
 	opacity: 1;
   }
@@ -605,6 +611,11 @@ img {
 .info{
 	height: 70vh;
   }
+.info label{
+	font-family: 'Noto Serif TC', serif;
+	letter-spacing:  .12em;
+    line-height: 1.8rem;
+  } 
   /* access */
 
   .access_box{
@@ -619,7 +630,7 @@ img {
 }
 .location div{
 		display: block;
-		margin-left: 100px;
+		margin-left: 20%;
 }
  
 
@@ -631,14 +642,18 @@ img {
 	display: flex;
 	margin-top: 20px;
  }
+
  .form_left , .form_right{
-	flex: 1;
 	display: flex;
 	flex-direction: column;
 	margin-left: 13%;
  }
  .form_left{
-	 margin-left: 40px;
+	width: 36%;
+	 margin-left: 3%;
+ }
+ .form_right{
+	width: 45%;
  }
 
 
@@ -670,7 +685,8 @@ img {
 }
 
 #message_form label{
-   margin: 40px 0 20px;
+   margin: 40px 0 10px 3px;
+   
    letter-spacing: .2rem;
    color: #5C5C5C;
    font-weight: 500;
@@ -693,7 +709,7 @@ img {
 	 justify-content: center;
 	 align-items: center; 
 	 cursor: pointer;   /*游標樣式: 手型*/
-	 margin-top: 30px;
+	 margin-top: 7%;
  }
  #message_form button:hover{
 	color: #fff;
