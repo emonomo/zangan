@@ -331,7 +331,15 @@ img{
     width: 100%;
     height: 100%;
 }
-
+/* 背景圖片 */
+#banner figure{
+    display: block;
+    /* width: 100%; */
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 #banner .text {
     color: #fff;
     display: flex;
@@ -352,6 +360,12 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 30px;
+}
+#banner .more img{
+    margin: -6px 0 2px;
+    width: 50px;
+    height: 50px;
 }
 
 #banner h1 {
