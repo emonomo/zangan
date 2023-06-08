@@ -194,17 +194,58 @@ body {
     
   }
   .text p{
-    margin-bottom: 6%;
+    margin-bottom: 9%;
     color: #797474;
   }
+
+  .text .next_btn{
+      display: flex;
+      margin-left: 60%;
+      flex-direction: column;
+      position: relative;
+  }
+
+  .text .next_btn span{
+    width: 30%;
+  }
+
   .text a{
-    display: inline-flex;
-    justify-content: flex-end;
-    margin-bottom: 6%;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
+    flex-wrap: wrap;
+}
+  .text h3{
+    display: inline-block;
     font-size: 1.5rem;
     font-family: 'Unna', serif;
+    letter-spacing: .1rem;
+    color: #1D201D;
   }
+
+  .text svg{
+    position: absolute;
+    bottom: -10px;
+  }
+  .text svg path{
+    stroke-dasharray: 210;
+    stroke-dashoffset: 0;
+  }
+  .text a:hover path{
+    animation: animate-arrow 1s ease-out backwards;
+  }
+ @keyframes animate-arrow{
+    0%{
+      stroke-dashoffset: 0;
+    }
+    80%{
+      stroke-dashoffset: 210;
+    }
+    100%{
+      stroke-dashoffset: 420;
+    }
+  } 
+
 
    /* 遮罩加輪播 */
     #marquee{
@@ -509,7 +550,7 @@ body {
         align-items: center;
         flex-direction: column;
     }
-    #list{
+    #list,#list2{
         display: flex;
         justify-content: center;
         align-items: center;

@@ -20,12 +20,14 @@ function animateCards() {
     cardGroup.classList.remove('animating');
   }
 
+
+
   window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > 300) { // Specify the desired scroll trigger height
       animateCards();
-    } else {
+   }else{
       removeAnimation();
     }
   });

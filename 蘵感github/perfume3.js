@@ -59,6 +59,21 @@ $('span').on('click', function() {
 		}
 		}
 	}
+
+//選單切換    隨著上面按鈕點選，切換下方資訊欄
+let courseShort = document.querySelector('#list');
+let courseLong = document.querySelector('#list2');
+
+	function showShort(){
+		courseShort.style.display = 'block'; //顯示
+		courseLong.style.display = 'none';  //隱藏
+		}
+	function showLong(){
+		courseLong.style.display = 'block'; //顯示
+		courseShort.style.display = 'none';  //隱藏
+		}
+
+
 //隨著上面按鈕點選，切換下方資訊欄
 	let classA = document.querySelector('#classA');
 	let classB = document.querySelector('#classB');
@@ -80,8 +95,6 @@ $('span').on('click', function() {
 			classB.style.display = 'none';  //隱藏
 		}
 
-
-
 // <!-- FAQ -->
 // Toggle Collapse
 $('.faq li .question').click(function () {
@@ -92,14 +105,18 @@ $('.faq li .question').click(function () {
   
 // <!-- go top -->
     //滑動置頂
-    $('#gotop').click(function(){
-		$('html,body').animate({scrollTop:0},1500);
-	  })
-	  //置頂按鈕淡出淡入
-	  $(window).scroll(function(){
-		if($(this).scrollTop()>200){
-		  $('#gotop').stop().fadeTo('fast',1);   //.fadeTo(1000,1) => 1000是一秒，沒有給速度的話要給空值 ""(預設為0.4秒)
-		}else{
-		  $('#gotop').stop().fadeOut();
-		}
-	  })
+
+	$(document).ready(function () {
+		  //滑動置頂
+		  $('#gotop').click(function(){
+			$('html,body').animate({scrollTop:0},1500);
+		  })
+		  //置頂按鈕淡出淡入
+		  $(window).scroll(function(){
+			if($(this).scrollTop()>200){
+			  $('#gotop').stop().fadeTo('fast',1);   //.fadeTo(1000,1) => 1000是一秒，沒有給速度的話要給空值 ""(預設為0.4秒)
+			}else{
+			  $('#gotop').stop().fadeOut();
+			}
+		  })
+	  });

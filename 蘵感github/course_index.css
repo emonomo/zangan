@@ -209,6 +209,8 @@ h4{
 		text-decoration: none;
 	}
 
+
+	
 /* 選取按鈕區  要跳到此頁面的對應區塊 */
 	#courseIntro{
 		width: 100%;
@@ -245,11 +247,23 @@ h4{
 		text-decoration: none;
 		padding: 8px 50px;
 		font-family: 'Noto Serif TC', serif;
-			letter-spacing:  .12em;
-			line-height: 40px;
-			font-weight: 700;
-			color: #3C4935;
+		letter-spacing:  .12em;
+		line-height: 40px;
+		font-weight: 700;
+		color: #3C4935;
 	}
+
+	.button li:hover a{
+		color: #fff;
+	}
+
+	.button li:hover{
+       background-color: #3C4935;
+	   transition-duration: 1s ;
+	}
+
+
+
 /* 課程區大圖 *5 section  */
 #courseAll{
 	display: flex;
@@ -276,6 +290,12 @@ h4{
 	overflow: hidden;
 }
 
+/* #perfume:hover .img-parallax{
+	cursor: pointer;
+	position: absolute;
+    transform: scale(180%);
+} */
+
 
 .img-parallax {
 	width: 100vmax;
@@ -296,7 +316,7 @@ h4{
 
 
  
-#courseAll section div{
+#courseAll section .right{
 	/* display: block;
 	text-align: left;
     position: absolute;
@@ -311,13 +331,12 @@ h4{
 	flex-direction: column;
 	justify-content: space-around;
 	text-align:  left;
-	transform: translateY(-50%);
-	bottom: 0;
+	bottom: 12%;
 	right: 0px;
 	width: 30%; 
     height: 20%;
 	padding: 1.5% 2%;
-
+	opacity: 0;
     
     /*標籤樣式*/
 	background-color: rgba(155, 130, 86, .35);
@@ -325,15 +344,16 @@ h4{
 	box-shadow: inset 2px 1px 2px rgba(255, 255, 255, 0.5);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.left{
+#courseAll section .left{
 	display: block;
 	text-align: left;
     position: absolute;
-	bottom: 0;
+	bottom: 12%;
 	left: 0px;
 	width: 450px; 
     height: 190px;
 	padding: 26px 20px;
+	opacity: 0;
     
     /*標籤樣式*/
 	background-color: rgba(155, 130, 86, .35);
@@ -366,12 +386,100 @@ h4{
 #courseAll h2{
 	color: #fff;
 	padding-right: 25%;
-	text-align: justify;
-	
+	text-align: justify;	
+}
+
+  /* .container > section:hover{
+  transform: translate(50X);
+	transition: margin-left 2s ease-in-out .5s;
+	animation: slideIn 1.5s 2s ease-in-out both;  
+}*/
+
+/* 標籤滑入*/
+.container > section:hover .left{
+	animation: slideIn 1.5s  ease-in-out forwards;	
+}
+@keyframes slideIn{
+	from{
+		bottom: 12%;
+		left: -500px;
+		opacity: 0.3;
+	}
+	to{
+		bottom: 12%;
+		left: 0;
+		opacity: 1;
+	}
 }
 
 
+/* 標籤滑入*/
+.container > section:hover .right{
+	animation: slideInR 1.5s  ease-in-out forwards;	
+	display: none;
+}
+@keyframes slideInR{
+	from{
+		bottom: 12%;
+		right: -500px;
+		opacity: 0.3;
+	}
+	to{
+		bottom: 12%;
+		right: 0;
+		opacity: 1;
+	}
+}
 
+
+/* 圖片放大 */
+
+.container > section:hover .img-parallax{
+	animation: scaleOOO 1s  ease-in-out both;	
+}
+@keyframes scaleOOO{
+	from{
+       width: 100%;
+	   height: auto;
+	}
+	to{
+		width: 120%;
+		height: auto;
+		transition-duration: 1.2s;
+	}
+}
+
+/* foooter */
+/* <!-- go top --> */
+#gotop{
+	position: fixed;
+	cursor: pointer; /* 手型 */ 
+	
+	right: 20px;
+	bottom: 20px;
+	width: 50px;
+	height: 80px;
+	z-index: 999;
+	background-color: rgba(60, 73, 53, 0.5);
+	border: #fff 1px solid;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#gotop:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  transition-duration: .5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+#gotop img{
+  width: 85%;
+}
 
 /*自由繪畫
 #courseAll section div{
