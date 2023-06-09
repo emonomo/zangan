@@ -76,8 +76,29 @@ $('.img-parallax').each(function(){
   });
 
   // ------------------------------------------------------------------------------
+  const sections = document.querySelectorAll('#courseAll section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.7) {
+        entry.target.classList.add('animate-in-view');
+      } else {
+        entry.target.classList.remove('animate-in-view');
+      }
+    });
+  }, {
+    threshold: 0.7
+  });
+  
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+  
+  
   /*
 // 跑出來標籤 滾動至指定位置啟動動畫
+
+
 
 function scaleOn() {
   const isImg = document.querySelector('.img-parallax');

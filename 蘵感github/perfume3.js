@@ -60,9 +60,21 @@ $('span').on('click', function() {
 		}
 	}
 
+
+	// function noShow() {
+	// 	const showup = document.querySelector('#list2 .chosen');
+	// 	showup.classList.add('none');
+	// }
+	// function removeAnimation() {
+	// 	const showup = document.querySelector('#list2 .chosen');
+	// 	showup.classList.remove('none');
+	//   }
+
+
 //選單切換    隨著上面按鈕點選，切換下方資訊欄
 let courseShort = document.querySelector('#list');
 let courseLong = document.querySelector('#list2');
+
 
 	function showShort(){
 		courseShort.style.display = 'block'; //顯示
@@ -74,6 +86,7 @@ let courseLong = document.querySelector('#list2');
 		}
 
 
+		
 //隨著上面按鈕點選，切換下方資訊欄
 	let classA = document.querySelector('#classA');
 	let classB = document.querySelector('#classB');

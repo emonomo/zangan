@@ -232,7 +232,7 @@ body {
     stroke-dashoffset: 0;
   }
   .text a:hover path{
-    animation: animate-arrow 1s ease-out backwards;
+    animation: animate-arrow 2s ease-out backwards;
   }
  @keyframes animate-arrow{
     0%{
@@ -557,9 +557,8 @@ body {
         flex-direction: column;
         margin-top: 20px;
         width: 55%;
-
     }
-
+   
     .chosen{
         position: relative;
         display: flex;
