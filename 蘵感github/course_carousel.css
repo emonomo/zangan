@@ -8,7 +8,7 @@
 .flickity-viewport {
   overflow: hidden;
   position: relative;
-  height: 450px;
+  height: 48vh;
 }
 
 .flickity-slider {

@@ -572,7 +572,6 @@ body {
         background-repeat: no-repeat;
     }
      .chosen:hover{
-        background-image: url('./img/course_item/block_click.svg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
@@ -628,7 +627,8 @@ body {
         position: absolute;
         display: block;
         z-index: 5;
-        right: 9%;
+        right: 7%;
+        width: 6%;
 
     }
     .cart img{
@@ -642,6 +642,40 @@ body {
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
+@media (max-width:1320px){
+  .class_name {
+    font-size: 4rem;
+  }
+  .box_inner h1 {
+    font-size: 1.2rem;
+   }
+   .box_inner h2 {
+    font-size: .8rem;
+  }
+   .price h3 {
+    font-size: 2rem;
+  }
+  .cart {
+    right: 4%;
+  }
+  .box_inner h2 {
+    width: 50%;
+  }
+  .detail {
+    width: 82%;
+  }
+      .chosen{
+        background-image: url('./img/course_item/990_block_default.svg');
+        background-size: 100% 100%;
+      }
+      .chosen:hover{
+        background-image: url('./img/course_item/990_block_click.svg');
+        background-size: 100% 100%;
+      }
+
+}
+
+
     /* 課程大綱  */
     .clssDetail{
         width: 100%;

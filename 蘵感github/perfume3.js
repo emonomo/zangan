@@ -52,10 +52,16 @@ $('span').on('click', function() {
 		var buttonId = button.id;
 	
 		// 判断当前按钮是否为点击的按钮
-		if (buttonId === clickedButton) {
+		if (buttonId === clickedButton && window.innerWidth > 1320) {
 			button.style.backgroundImage = "url('./img/course_item/block_click.svg')"; // 切换背景图为新的背景图
-		} else {
+		} else if(window.innerWidth > 1320){
 			button.style.backgroundImage = "url('./img/course_item/block_default.svg')"; // 切换背景图为默认背景图
+		}
+
+		if (buttonId === clickedButton && window.innerWidth < 1320) {
+			button.style.backgroundImage = "url('./img/course_item/990_block_click.svg')"; // 切换背景图为新的背景图
+		}  else if(window.innerWidth < 1320) {
+			button.style.backgroundImage = "url('./img/course_item/990_block_default.svg')"; // 切换背景图为默认背景图
 		}
 		}
 	}

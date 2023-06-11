@@ -526,13 +526,17 @@ img {
 	display: flex;
 	margin-top: 40px;
   }
+  .access_box #map{
+	flex: 40%;
+	height: 50vh;
 
-.location{
+}
+.access_box .location{
 	flex: 60%;
 	display: flex;
     align-items: flex-end;
 }
-.location div{
+.access_box .location div{
 		display: block;
 		margin-left: 20%;
 }

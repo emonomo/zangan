@@ -130,8 +130,7 @@
        <div class="info">
             <h3>Access</h3> 
             <div class="access_box">
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1074.6013053912216!2d121.51862211277742!3d25.05057768447596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96c49f1e473%3A0xb4f74ae9ed21c1fb!2z5Y-w5YyX55W25Luj6Jed6KGT6aSo!5e0!3m2!1szh-TW!2sus!4v1684566887614!5m2!1szh-TW!2sus" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="map">
                 </div>
                 <div class="location"> 
                     <div>
@@ -215,6 +214,9 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
          <!-- jQuery Smoove -->
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
-    <script src="./about.js"></script>
+         <script async
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFLjZQqB-gjKLNMWLio5PdpiB0L0Nh8ZM&callback=initMap">
+     </script>
+         <script src="./about.js"></script>
 </body>
 </html>
