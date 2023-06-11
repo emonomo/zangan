@@ -236,8 +236,19 @@ img {
 }
 
 /* topbar */
-#topbar,
+#topbar{
+    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3C4935;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
 #topbarw {
+    /* background-color: rgba(255, 255, 255, 0.05); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -250,6 +261,7 @@ img {
 
 #topbarw {
     background-color: rgba(255, 255, 255, 0.05);
+    /* height: 5vh; */
 }
 
 .menu {
@@ -348,7 +360,7 @@ img {
 @media (max-width:576px) {
     #topbarw {
         display: none;
-        background-color: rgba(255, 255, 255, 0);
+        /* background-color: rgba(255, 255, 255, 0); */
     }
 }
 
@@ -370,6 +382,7 @@ img {
     }
 }
 
+
 /* 漢堡按鈕 topbarrwd */
 
 /* RWD 漢堡按鈕 */
@@ -380,7 +393,7 @@ img {
 
 /* 2.banner */
 #banner {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -407,14 +420,14 @@ img {
     /* RWD物件填滿 */
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 /* 背景圖片 */
 #banner figure {
     display: block;
     /* width: 100%; */
-    height: 90vh;
+    height: 80vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -483,14 +496,14 @@ img {
 /* RWD手機 */
 @media (max-width:576px) {
     #banner {
-        width: 68%;
-        line-height: 70vh;
-        height: 70vh;
+        width: 100%;
+        line-height: 100vh;
+        height: 100vh;
     }
 
     #banner video {
-        width: 68%;
-        height: 70vh;
+        width: 100%;
+        height: 100vh;
         object-fit: cover;
     }
 
@@ -620,25 +633,27 @@ img {
 /* RED手機 */
 @media (max-width:576px) {
     #about {
-        width: 68%;
-        height: 70vh;
+        width: 100%;
+        height: 100vh;
     }
 
     #about .area {
-        width: 100%;
-        height: 70vh;
+        width: 80%;
+        height: 80vh;
         margin: 0;
-        margin-left: 10px;
+        margin-left:10%; 
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;*/
     }
-
     #about .p1 img {
         display: none;
     }
 
     #about .p2 img {
-        width: 280px;
+        width: 390px;
         height: 250px;
-        margin: 430px 0 0 -270px;
+        margin: 430px 0 0 -300px;
         object-fit: cover;
     }
 
