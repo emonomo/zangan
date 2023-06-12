@@ -194,7 +194,7 @@ body {
     
   }
   .text p{
-    margin-bottom: 9%;
+    margin-bottom: 6vh;
     color: #797474;
   }
 
@@ -245,8 +245,42 @@ body {
       stroke-dashoffset: 420;
     }
   } 
-
-
+  @media (max-width: 1320px){
+    .text h3{
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 992px){
+    .text h3{
+      font-size: .8rem;
+    }
+    .text p{
+      margin-bottom: 5vh;
+    }
+  }
+  @media (max-width: 800px){
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 88vh;
+      align-items: center;
+  }
+  .img {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 10% 10% 50px;
+  }
+  .text h3{
+    font-size: 1.2rem;
+  }
+}
    /* 遮罩加輪播 */
     #marquee{
         width:100%;
@@ -255,6 +289,7 @@ body {
         margin: 5px 0;
         display: flex;
         position: relative;
+        overflow: hidden;
     }
 
     #marquee .mask{
@@ -271,7 +306,7 @@ body {
 
     #marquee .view {
         overflow: hidden;
-        width: 126%; 
+        width: calc(480px * 10); 
         position: absolute;
     }
     .randomPic{
@@ -281,8 +316,11 @@ body {
     }
     .randomPic img{
       object-fit:cover;
-      width: 480px;
+      width:100%;
       height: 350px;  
+    }
+    .pic-container{
+      width: calc(480px * 10);
     }
     /* *,
 *::before,
@@ -307,7 +345,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-480px * 5));
   }
 }
 @media (max-width: 1024px) {
@@ -316,7 +354,7 @@ body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-125%);
+      transform: translateX(calc(-480px * 5));
     }
   }
   @keyframes marquee {
@@ -324,17 +362,17 @@ body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-125%);
+      transform: translateX(calc(-480px * 5));
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   @-webkit-keyframes marquee {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-166.65%);
+      transform: translateX(calc(-252px * 5));
     }
   }
   @keyframes marquee {
@@ -342,7 +380,7 @@ body {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-166.65%);
+      transform: translateX(calc(-252px * 5));
     }
   }
 }
@@ -353,7 +391,7 @@ body {
           animation: marquee 15s infinite linear;
 }
 #marquee .randomPic img{
-  flex-basis:20%;
+  flex-basis:10%;
   flex-shrink: 0;
 }
 @media (max-width: 1024px) {
@@ -361,9 +399,32 @@ body {
     flex-basis: 20%;
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 800px) {
   #marquee .randomPic img{
     flex-basis: 33.33%;
+  }
+  #marquee .pic-container {
+    width: 177%;
+}
+  #marquee{
+    height: 20vh;  
+}
+
+  #marquee .mask{
+    width: auto;
+    height: 20vh;  
+}
+  
+  .randomPic img{
+    object-fit:cover;
+    width: 252px;
+    height: 20vh;
+  }
+  .view {
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
   }
 }
 /* ------------------------------------------- */
@@ -372,13 +433,13 @@ body {
     #teacher{
         background-color: #DACFB8;
         width: 100%;
-        height: 370px;
+        height: 43vh;
         display: flex;
         justify-content: center;
         align-items: center
     }
     #teacher .all{
-        padding:0 200px ;
+        padding:0 10% ;
         height: 100%;
         display: flex;
         align-items: center;
@@ -437,6 +498,44 @@ body {
         text-align: justify;
     }
 
+
+    @media (max-width: 992px) {
+    #teacher {
+    width: 100%;
+    }
+    #teacher img {
+      padding-bottom: 14%;
+
+  }
+    #teacher .all {
+      padding: 0 5%;
+  }
+    #teacher .intro {
+      width: 100%;
+      flex-direction: flex;
+    }
+    #teacher .words {
+      display: flex;
+      flex-direction: column;
+     }
+     .words_l {
+      width: 100%;
+      margin-right: 0%;
+    }
+    .words_l h1 {
+      font-size: 1.4rem;
+      margin-bottom: 5%;
+    }
+    .words_r{
+      margin-top: 3%;
+    }
+    .words_l p,.words_r p{
+      font-size: .7rem;
+    }
+  }
+
+
+      /* justify-content: center;
     /* <!-- 課程選取大區塊 --> */
 
     /* 長期短期選擇 */
@@ -447,7 +546,7 @@ body {
   }
    
     #chose {
-       width: 55%;
+       width: 58%;
        display: flex;
        flex-direction: column;
     }
@@ -543,6 +642,24 @@ body {
     color: #3C4935;
   }
 
+  @media (max-width:1480px){
+    #chose {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+}
+
+  @media (max-width:992px){
+  #chose {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+   }
+
+}
+
     /* 課程選項  */ 
 
      #course{
@@ -556,7 +673,7 @@ body {
         align-items: center;
         flex-direction: column;
         margin-top: 20px;
-        width: 55%;
+        width: 58%;
     }
    
     .chosen{
@@ -578,7 +695,7 @@ body {
 
     .detail{
         text-decoration: none;
-        width: 72%;
+        width: 75%;
     }
      .class_name{
         position: absolute;
@@ -602,8 +719,10 @@ body {
         
     }
     .box_inner h1{
-        display: inline;
-        width: 31%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 34%;
         color: #3C4935;
     }
 
@@ -627,8 +746,8 @@ body {
         position: absolute;
         display: block;
         z-index: 5;
-        right: 7%;
-        width: 6%;
+        right: 5%;
+        width: 5%;
 
     }
     .cart img{
@@ -642,15 +761,15 @@ body {
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
-@media (max-width:1320px){
+@media (max-width:1480px){
   .class_name {
     font-size: 4rem;
   }
   .box_inner h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
    }
    .box_inner h2 {
-    font-size: .8rem;
+    font-size: .9rem;
   }
    .price h3 {
     font-size: 2rem;
@@ -658,22 +777,47 @@ body {
   .cart {
     right: 4%;
   }
-  .box_inner h2 {
+  /* .box_inner h2 {
     width: 50%;
   }
   .detail {
     width: 82%;
   }
-      .chosen{
-        background-image: url('./img/course_item/990_block_default.svg');
-        background-size: 100% 100%;
-      }
-      .chosen:hover{
-        background-image: url('./img/course_item/990_block_click.svg');
-        background-size: 100% 100%;
-      }
+  .chosen{
+    background-image: url('./img/course_item/990_block_default.svg');
+    background-size: 100% 100%;
+  }
+  .chosen:hover{
+    background-image: url('./img/course_item/990_block_click.svg');
+    background-size: 100% 100%;
+  } */
+    #list, #list2 {
+        width: 70%;
+   }
 
 }
+      @media (max-width:992px){
+      #list, #list2 {
+        width: 78%;
+       }
+       .box_inner h1 {
+        font-size: 1rem;
+       }
+       .box_inner h2 {
+        width: 50%;
+        font-size: .6rem;
+      }
+      .detail {
+        width: 78%;
+    }
+    .price h3 {
+      font-size: 1.5rem;
+     }
+
+     .price p {
+      font-size: 1rem;
+     }
+}    
 
 
     /* 課程大綱  */
@@ -685,10 +829,11 @@ body {
         margin-top: 50px;
         position: relative;
     }
+    
     .clssDetail section{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-radius: .3rem;
-        padding: 40px 25px;
+        padding:2% 2%;
     }
     .decoLogo{
         background-image: url(./img/media/logo（粽色-透明度）.svg);
@@ -702,11 +847,11 @@ body {
         height: 320px;
         z-index: 3;
         position: absolute;
-        left:235px;
-        top: 55px;
+        left: 13%;
+        top: 10vh;
     }
     .clssDetail section{
-        width: 55%;
+        width: 57%;
     }
      /* 刻出來的斜角矩形，會有像素感
      .chosen{
@@ -730,7 +875,15 @@ body {
         background-size: 100% 100%;
         background-repeat: no-repeat;
     } */
+@media (max-width:1480px){
+      .clssDetail section {
+      width: 69%;
+  }
+  .decoLogo {
+    left: 2%;
+}
 
+}
 
 
     /* 報名按鈕 */
@@ -745,7 +898,7 @@ body {
         background-color: #fff;
         text-decoration: none;
         display: block;
-        width: 580px;
+        width: 31%;
         height: 60px;
         font-weight: 400;
         text-align: center;
@@ -761,6 +914,12 @@ body {
       color: #fff;
     }
 
+    @media (max-width:1320px){
+
+      #button a {
+        width: 46%;
+      }
+}
     /* FAQ*/
 
 .faq_box {
@@ -860,6 +1019,11 @@ body {
   cursor: pointer;
   padding: 20px 0;
   transition: color 0.5s ease;
+}
+@media(max-width:1320px){
+  .parent-container {
+    width: 87%;
+ }
 }
 
 @media screen and (max-width:767px) {
