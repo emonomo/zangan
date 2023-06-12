@@ -362,12 +362,16 @@ img {
         display: none;
         /* background-color: rgba(255, 255, 255, 0); */
     }
+    #topbar {
+        display: none;
+    }
 }
 
 /* RED手機 */
 @media (max-width:576px) {
     #topbar {
         display: none;
+        z-index: -1;
     }
 }
 
@@ -634,14 +638,14 @@ img {
 @media (max-width:576px) {
     #about {
         width: 100%;
-        height: 100vh;
+        height: 70vh;
     }
 
     #about .area {
-        width: 80%;
-        height: 80vh;
+        width: 100%;
+        height: 65vh;
         margin: 0;
-        margin-left:10%; 
+        margin-left:15%; 
         /* display: flex;
         flex-direction: column;
         align-items: center;*/
@@ -662,6 +666,7 @@ img {
     }
 
     #about .area h3 {
+        /* width: 100%; */
         margin-bottom: -5px;
     }
 
@@ -691,8 +696,10 @@ img {
     }
 
     #about .bg_logo img {
-        width: 63%;
-        margin-top: 210px;
+        width: 75%;
+        margin-top: 23vh;
+        margin-left: -3%;
+        z-index: 99;
     }
 }
 
@@ -834,24 +841,30 @@ img {
 /* RED手機 */
 @media (max-width:576px) {
     #course {
-        width: 68%;
+        width: 100%;
         height: 110vh;
     }
 
     #course ul {
         width: 100%;
         height: 110vh;
-        margin-left: -480px;
+        margin-left: -125%;
+        margin-left: -108%;
+        /* margin-left: -480px; */
     }
 
     #course li {
         margin: 0;
-        width: 68%;
+        width: 100%;
     }
 
     #course .cimg img {
         width: 120px;
+        width: 140px;
         height: 210px;
+        height: 230px;
+        /* width: 130%; */
+        /* height: 30vh; */
         object-fit: cover;
     }
 
@@ -867,36 +880,35 @@ img {
     }
 
     #course .item1 {
-        margin: -850px 0 0 350px;
-        margin: -550px 0 0 350px;
+        /* margin: -550px 0 0 350px; */
+        margin: -60vh 0 0 145%;
     }
 
     #course .item2 {
-        margin: -650px -10px 0 10px;
+        margin: -350px -10px 0 10px;
         margin: -350px -10px 0 10px;
     }
 
     #course .item3 {
-        margin: -280px 100px 0 -240px;
         margin: 20px 100px 0 -240px;
+        margin: 50px 100px 0 -280px;
+        /* margin: 10vh 10% 0 -145%; */
     }
 
     #course .item4 {
-        margin: -100px 0 0 -90px;
         margin: 200px 0 0 -90px;
     }
 
     #course .item5 {
-        margin: 500px 0 0 -250px;
-        margin: 800px 0 0 -250px;
         margin: 600px 0 0 -250px;
+        margin: 600px 0 0 -290px;
     }
 
     #course .bglogo1 img {
-        display: none;
-        /* margin: -150px 0 0 150px; */
-        /* width: 50%; */
-        /* height: 15vh; */
+        /* display: none; */
+        margin: 920px 0 0 100px;
+        width: 50%;
+        height: 15vh;
         /* width: 100px;
         height: 150px;
         border: solid 3px red; */
@@ -1170,7 +1182,7 @@ img {
 
 #teachers::before,
 #teachers::after {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    /* background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); */
     content: "";
     height: 100px;
     position: absolute;
@@ -1222,12 +1234,12 @@ img {
 /* RWD手機 */
 @media (max-width:576px) {
     #teachers {
-        width: 68%;
+        width: 100%;
         height: 70vh;
     }
 
     #teachers .nav {
-        margin: -200px 0 0 10px;
+        margin: -200px 0 0 40px;
     }
 
     #teachers .nav h3 {
@@ -1235,7 +1247,7 @@ img {
     }
 
     #teachers .nav hr {
-        width: 15em;
+        width: 18em;
     }
 
     #teachers .bglogo {
@@ -1352,13 +1364,16 @@ img {
 /* RED手機 */
 @media (max-width:576px) {
     #news {
-        width: 68%;
-        height: 70vh;
-        margin-top: 200px;
+        width: 100%;
+        margin-bottom: 5vh;
+        /* height: 100vh; */
+        /* margin-top: 200px; */
     }
 
     #news .pho img {
-        width: 265px;
+        /* width: 265px; */
+        /* height: 250px; */
+        width: 390px;
         height: 250px;
         margin: -495px 0 0 0;
         object-fit: cover;
@@ -1366,20 +1381,23 @@ img {
 
     #news .uu {
         width: 100%;
-        margin: 400px 0 0 -265px;
+        margin: 100px 0 0 -350px;
     }
 
     #news .nav h1 {
         font-size: 1.5rem;
         letter-spacing: 0.01rem;
     }
-
+    #news .box1{
+        height: 7vh;
+    }
     #news hr {
-        width: 15em;
+        width: 18em;
+        margin-left: 1px;
     }
 
     #news .more {
-        margin: 10px -5px 0 0;
+        margin: 10px 40px 0 0;
     }
 
     #news .arrow img {
@@ -1517,15 +1535,17 @@ img {
 /* RED手機 */
 @media (max-width:576px) {
     #media {
-        width: 68%;
-        height: 105vh;
-        margin-top: 300px;
+        width: 100%;
+        height: 100vh;
+        /* margin-top: 300px; */
+        margin-top: -15vh;
+        position: relative;
     }
 
     #media .span {
         width: 100%;
         height: 80px;
-        margin: 0 0 0 -10px;
+        margin: 0 0 -5vh 4px;
     }
 
     #media .span h3 {
@@ -1539,8 +1559,14 @@ img {
     }
 
     #media .span hr {
-        width: 15em;
+        width: 18em;
         margin-top: 8px;
+        margin-left: -2px;
+    }
+    #media .item1,
+    #media .item2,
+    #media .item3{
+        margin-bottom: -10vh;
     }
 
     #media .item4,
@@ -1550,31 +1576,44 @@ img {
     }
 
     #media .main {
-        margin: 0 0 0 30px;
+        margin: 0 0 0 60px;
         display: flex;
         flex-direction: column;
     }
 
     #media h2 {
-        font-size: 0.85rem;
-        font-weight: 700;
-        letter-spacing: 0.05rem;
-        width: 85%;
-        line-height: 1.5em;
+        /* font-size: 0.85rem; */
+        /* font-weight: 700; */
+        letter-spacing: 0.15rem;
+        width: 80%;
+        /* line-height: 1.5em; */
     }
 
     #media .img img {
-        width: 80%;
+        width: 76%;
         margin: -40px 0 -50px 0;
     }
 
     #media h3 {
-        width: 85%;
-        letter-spacing: 0.03rem;
+        width: 78%;
+        letter-spacing: 0.12rem;
+        /* letter-spacing: 0.03rem; */
     }
 
     #media .more {
         margin-bottom: 30px;
+    }
+    #media .logobg{
+        display: block;
+        width: 100%;
+        height: 40vh;
+        margin-top: 23vh;
+        margin-right: 15%;
+        margin-left: -15%;
+        z-index: 99;
+        position: absolute;
+        left: 68%;
+        top: 5vh;
     }
 
 }
@@ -1691,28 +1730,26 @@ img {
 /* RED手機 */
 @media (max-width:576px) {
     #footer {
-        width: 68%;
-        height: 30vh;
+        width: 100%;
+        height: 40vh;
         overflow: hidden;
     }
 
     .footer_nav img {
         width: 10%;
         height: 50px;
-        margin: -50px 0 0 310px;
-    }
-
-    #footer .copyright {
-        margin-left: -5px;
+        margin: -60px 0 20px 315px;
     }
 
     .footer_nav {
         margin: 40px 0 0 -355px;
     }
-
+    #footer li{
+        margin-left: 1%;
+    }
     #footer .eng {
-        font-size: 1.2rem;
-        margin-bottom: -10px;
+        /* font-size: 1.2rem; */
+        /* margin-bottom: -10px; */
     }
 
     .footer_nav .addr {
@@ -1724,21 +1761,24 @@ img {
     }
 
     #footer h3 .time {
-        margin: 20px 0 0 -85px;
+        margin: 20px 0 0 -115px;
     }
 
     #footer h3 .time h3 {
-        font-size: 0.75rem;
-        letter-spacing: 0.15em;
+        /* font-size: 0.75rem; */
+        /* letter-spacing: 0.15em; */
+    }
+    #footer .copyright{
+        margin-bottom: -3vh;
     }
 
     #footer .icon_soc {
         width: 300px;
-        margin: -280px 0 0 -200px;
+        margin: -280px 0 0 -140px;
     }
 
     #footer .contact {
-        margin: 30px 0 0 -205px;
+        margin: 30px 0 0 -160px;
     }
 
     #footer .contact h3 {
@@ -1748,22 +1788,22 @@ img {
     }
 
     #footer .faq {
-        margin: -125px 0 0 -560px;
+        margin: -125px 0 0 -515px;
     }
 
     #footer .faq h3 {
-        font-size: 0.75rem;
-        line-height: 5em;
-        letter-spacing: 0.1em;
+        /* font-size: 0.75rem; */
+        /* line-height: 5em; */
+        /* letter-spacing: 0.1em; */
     }
-
     #footer .blank {
         background-color: #3C4935;
-        width: 100px;
-        height: 55px;
+        width: 120px;
+        /* height: 60px; */
+        height: 10vh;
         position: absolute;
-        left: 50px;
-        top: 0px;
+        left: 70px;
+        top: 2vh;
     }
 }
 
@@ -2911,6 +2951,7 @@ img {
 
 /* ---最新消息單獨分頁news_content--- */
 #news_content {
+    height: 100vh;
     padding: 50px 0;
     /* border: solid 5px red; */
 }
@@ -2930,8 +2971,8 @@ img {
 
 /* 選單區 */
 #news_content li {
-    padding: 5px 5px;
-    margin: 0 10px;
+    padding: 5px 11px;
+    /* margin: 0 10px; */
     /* display: flex;
     text-align: center;
     align-items: center;*/
@@ -2944,12 +2985,17 @@ img {
     text-decoration: none;
     width: 180px;
     height: 40px;
+    /* width: 11em; */
+    /* height: 5vh; */
     border: solid 2px #E7E4DB;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+}
+#news_content li a h3:hover{
+    color: #fff;
 }
 
 /* 單一按鈕 */
@@ -2958,6 +3004,8 @@ img {
     text-decoration: none;
     width: 180px;
     height: 40px;
+    /* width: 11em; */
+    /* height: 5vh; */
     border: solid 2px #E7E4DB;
     border-radius: 5px;
     display: flex;
@@ -2965,132 +3013,100 @@ img {
     align-items: center;
     margin-bottom: 40px;
 }
-
-/* 主要區塊 */
-#news_content .nc_main {
+#news_content h3{
+    font-weight: 700;
+}
+#news_content .a{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    /* margin: 0 50px 0 -120px; */
-    /* margin-left: 40px; */
-    /* border: solid 5px rgb(228, 147, 147); */
+    height: 80vh;
+    margin-left: 4%;
 }
-
-#news_content .img2 {
-    display: block;
-    width: 24%;
-    /* height: 80vh; */
-    margin: 0 -50px 0 50px;
-    /* border: solid 3px red; */
-}
-
 /* 左邊圖片 */
-.nc_main img {
-    width: 85%;
-    height: 95vh;
+#news_content .pho img {
+    width: 55%;
+    height: 82vh;
+    margin-left: 12%;
+    /* margin-top: -12vh; */
+    /* width: 100%; */
 }
 
-.news_date {
-    /* font-size: 14px; */
-    font-size: 0.875rem;
-    color: #1d201d;
-    /* letter-spacing: 2px; */
-    letter-spacing: 0.125rem;
-    padding: 10px;
-    text-align: start;
-    width: 700px;
+/* 右邊內容區塊 */
+#news_content .uu {
+    /* padding: 10px; */
+    /* margin: 30px 60px 30px 30px; */
+    /* margin: 5vh 3.75rem 5vh 1.875rem; */
+    margin: 5vh 1% 5vh 0;
+    /* border: solid 3px rgb(236, 179, 226); */
 }
 
-.news_text {
-    /* font-size: 16px; */
-    font-size: 1rem;
-    color: #1d201d;
-    /* letter-spacing: 2px; */
-    letter-spacing: 0.125rem;
-    padding: 10px;
-    margin: 10 0px;
-    text-align: start;
-    width: 700px;
-}
-
-#news h1 {
-    /* font-size: 34px; */
-    font-size: 2.125rem;
-    color: #1D201D;
-}
-
-.news_col {
-    margin: 0 30px;
-    /* border: solid 5px rgb(154, 228, 147); */
+/* 標題列 */
+#news_content .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* margin-top: -40px; */
+    /* border: solid 3px rgb(163, 215, 248); */
 }
 
 /* 查看更多 */
-.news_more {
-    vertical-align: bottom;
-    position: absolute;
-    right: -20px;
-    bottom: 0;
-    line-height: 30px;
-    padding: 1px;
-    margin: 10px;
-    /* border: solid 5px rgb(144, 178, 213); */
+#news_content .more {
+    margin: 25px 10px 0 0;
 }
 
-/* news內容區塊 */
-.news_news {
+#news_content .more h3 {
+    /* margin: 0 0 -20px 0; */
+}
+
+#news_content .more a {
+    margin: 0 0 20px 0;
+    /* border: solid 3px rgb(236, 179, 226); */
+}
+
+/* 內容大區塊 */
+#news_content .kk {
     position: relative;
-    padding: 3px 0;
-    margin: 10px 0;
-    width: 700px;
-    height: 100px;
-    /* border: solid 5px rgb(144, 178, 213); */
 }
 
-.news_news .hr1 {
-    margin-bottom: 10px;
-    /* border: solid 5px rgb(144, 178, 213); */
+/* 內容小區塊 */
+#news_content .box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    margin-left: -20%;
 }
 
-
-/* icon右圈圈箭頭 */
-.news_img {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    width: 48px;
-    height: 48px;
-    margin: 20px;
-    /* border: solid 5px rgb(144, 178, 213); */
+#news_content .text {
+    /* margin: 20px 20px 20px 0; */
 }
 
-/* hover */
-.news_img {
-    background-image: url(img/index/index-news/arrow\(白\).svg);
+/* hr */
+#news_content hr {
+    /* width: 100%; */
+    width: 50em;
+    margin-left: -20%;
+    /* margin: 10px 0; */
 }
 
-.news_img:hover {
+/*活動快訊  */
+#news_content h2 {
+    letter-spacing: 0.02rem;
+    line-height: 1.5rem;
+}
+
+/* :hover */
+#news_content .arrow img {
+    background-image: url(img/index/index-news_content/arrow\(白\).svg);
+}
+
+#news .arrow img:hover {
     background-image: url(img/index/index-news/arrow\(黑\).svg);
 }
 
-.news_date {
-    /* font-size: 14px; */
-    font-size: 0.875rem;
-    padding: 10px;
-    margin: 10 0px;
-    text-align: start;
-    width: 700px;
-    font-family: 'Unna', serif;
-}
-
-.news_text {
-    /* font-size: 16px; */
-    font-size: 1rem;
-    padding: 10px;
-    margin: 10 0px;
-    text-align: start;
-    width: 700px;
-    /* border: solid 5px red; */
-}
 
 /* ------news_page-最新消息詳情頁----- */
 #news_page {
