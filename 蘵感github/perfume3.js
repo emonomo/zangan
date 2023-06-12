@@ -43,40 +43,69 @@ $('span').on('click', function() {
 //<!-- 課程切換選項 -->
 
 //上面按鈕隨著點選切換顏色，按下一個按鈕本來的會回到原背景圖
-	function changeBackground(clickedButton) {
-		var buttons = document.getElementsByClassName('chosen');
-	
-		// 遍历所有按钮
-		for (var i = 0; i < buttons.length; i++) {
-		var button = buttons[i];
-		var buttonId = button.id;
-	
-		// 判断当前按钮是否为点击的按钮
-		if (buttonId === clickedButton && window.innerWidth > 900) {
-			button.style.backgroundImage = "url('./img/course_item/block_click.svg')"; // 切换背景图为新的背景图
-		} else if(window.innerWidth > 900){
-			button.style.backgroundImage = "url('./img/course_item/block_default.svg')"; // 切换背景图为默认背景图
-		}
+function changeBackground(clickedButton) {
+	var buttons = document.getElementsByClassName('chosen');
 
-		if (buttonId === clickedButton && window.innerWidth < 900) {
-			button.style.backgroundImage = "url('./img/course_item/990_block_click.svg')"; // 切换背景图为新的背景图
-		}  else if(window.innerWidth < 900) {
-			button.style.backgroundImage = "url('./img/course_item/990_block_default.svg')"; // 切换背景图为默认背景图
+	// 更新按钮背景图根据窗口宽度
+	for (var i = 0; i < buttons.length; i++) {
+	  var button = buttons[i];
+	  var buttonId = button.id;
+  
+	  if (window.innerWidth > 768) {
+		if (buttonId === clickedButton) {
+		  button.style.backgroundImage = "url('./img/course_item/block_click.svg')"; // 切换背景图为新的背景图
+		} else {
+		  button.style.backgroundImage = "url('./img/course_item/block_default.svg')"; // 切换背景图为默认背景图
 		}
+	  } else {
+		if (buttonId === clickedButton) {
+		  button.style.backgroundImage = "url('./img/course_item/768_block_click.svg')"; // 切换背景图为新的背景图
+		} else {
+		  button.style.backgroundImage = "url('./img/course_item/768_block_default.svg')"; // 切换背景图为默认背景图
 		}
+	  }
 	}
+  }
+  // 添加窗口大小改变事件监听器
+window.addEventListener('resize', function() {
+	var clickedButton = null; // 传入null代表没有按钮被点击
+	changeBackground(clickedButton);
+  });
+ 
+  
+  // 初始化时调用一次，确保初始背景图正确
+ 
 
 
-	// function noShow() {
-	// 	const showup = document.querySelector('#list2 .chosen');
-	// 	showup.classList.add('none');
-	// }
-	// function removeAnimation() {
-	// 	const showup = document.querySelector('#list2 .chosen');
-	// 	showup.classList.remove('none');
-	//   }
-
-
+// 在页面加载完成后调用该函数
+window.addEventListener('load', function() {
+	// 获取 list 和 list2 的第一个选项按钮
+	var firstButtonList = document.querySelector('#list .chosen:first-child');
+	var firstButtonList2 = document.querySelector('#list2 .chosen:first-child');
+  
+	// 将第一个选项按钮的背景图设置为默认图像
+	setDefaultBackgroundImage(firstButtonList);
+	setDefaultBackgroundImage(firstButtonList2);
+  
+	// 添加窗口大小改变事件监听器
+	window.addEventListener('resize', function() {
+	  setDefaultBackgroundImage(firstButtonList);
+	  setDefaultBackgroundImage(firstButtonList2);
+	});
+  });
+  
+  // 根据窗口大小设置背景图的函数
+  function setDefaultBackgroundImage(button) {
+	var backgroundImage;
+	if (window.innerWidth > 768) {
+	  backgroundImage = "url('./img/course_item/block_click.svg')";
+	} else {
+	  backgroundImage = "url('./img/course_item/768_block_click.svg')";
+	}
+	button.style.backgroundImage = backgroundImage;
+  }
+  
+  changeBackground(null);
 //選單切換    隨著上面按鈕點選，切換下方資訊欄
 let courseShort = document.querySelector('#list');
 let courseLong = document.querySelector('#list2');
