@@ -773,6 +773,16 @@ body {
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
+
+    /* .default_768{
+      width: 980px;
+      height: 215px;
+    }
+    .click_768{
+     width: 980px;
+     height: 215px;
+   } */
+
 @media (max-width:1480px){
   .class_name {
     font-size: 4rem;
@@ -851,7 +861,7 @@ body {
     width: 100%;
   }
   .cart {
-    top: 2.5vh;
+    top: 2.8vh;
     width: 6%;
 }
 }    
@@ -859,6 +869,9 @@ body {
 @media (max-width:576px){
 
 }  
+
+
+
 
 
 
@@ -885,8 +898,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 220px;
-        height: 320px;
+        width: 10%;
+        height: 35vh;
         z-index: 3;
         position: absolute;
         left: 13%;
@@ -918,14 +931,26 @@ body {
         background-repeat: no-repeat;
     } */
 @media (max-width:1480px){
-      .clssDetail section {
+  .clssDetail section {
       width: 69%;
   }
-  .decoLogo {
-    left: 2%;
-}
+  .decoLogo{
+    left: 7%;
+  }
 
 }
+
+@media (max-width:768px){
+  .clssDetail section {
+    width: 77%;
+  }
+  .decoLogo{
+    width: 18%;
+    left: 2%;
+}
+}
+
+
 
 
     /* 報名按鈕 */
