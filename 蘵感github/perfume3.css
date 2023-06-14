@@ -666,6 +666,16 @@ body {
    }
 
 }
+@media (max-width:576px){
+  #chose a {
+    font-size: .8rem;
+  }
+  
+#chose ul li span {
+    padding: 8px 2%;
+
+}
+}
 
     /* 課程選項  */ 
 
@@ -748,11 +758,15 @@ body {
         width: 19%;
         align-items: center;
     }
+    .price p {
+      font-size: 1.2rem;
+      color: #3C4935;        
+    }
     .price h3{
         font-size: 2.5rem;
         font-weight: 700;
         letter-spacing: 0.07rem;
-        margin-left: 5px;
+        margin-left: 2%;
     }
     .cart{
         position: absolute;
@@ -818,7 +832,7 @@ body {
    }
 
 }
-      @media (max-width:992px){
+ @media (max-width:992px){
       #list, #list2 {
         width: 78%;
        }
@@ -842,34 +856,82 @@ body {
      }
 }    
 @media (max-width:768px){
-  .price {
-    align-items: baseline;
-}
+      .price {
+        align-items: baseline;
+    }
 
-  .box_inner {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
-  .detail {
-    width: 69%;
-}
-  .box_inner h1 {
-    width: 100%;
-  }
-  .box_inner h2 {
-    width: 100%;
-  }
-  .cart {
-    top: 2.8vh;
-    width: 6%;
-}
+      .box_inner {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+      .detail {
+        width: 69%;
+    }
+      .box_inner h1 {
+        width: 100%;
+      }
+      .box_inner h2 {
+        width: 100%;
+      }
+      .cart {
+        top: 2.8vh;
+        width: 6%;
+    }
 }    
 
 @media (max-width:576px){
-
+    .chosen {
+        height: 14.8vh;
+    }
+      .detail {
+        width: 71%;
+    }
+    .class_name {
+      font-size: 3.2rem;
+    }
+    .box_inner h1 {
+      font-size: 1rem;
+    }
+    .box_inner h2 {
+      letter-spacing: .02rem;
+      font-size: .75rem;
+    }
+    .price h3 {
+      font-size: 1.2rem;
+    }
 }  
+@media (max-width:450px){
+    #list, #list2 {
+        width: 86%;
+    }
+    .detail {
+      width: 77%;
+    }
+      .chosen {
+        height: 14.8vh;
+    }
+    .class_name {
+      font-size: 3.2rem;
+    }
+    .box_inner h1 {
+      font-size: 1rem;
+    }
+    .box_inner h2 {
+      letter-spacing: .02rem;
+      font-size: .75rem;
+    }
+    .price h3 {
+      font-size: 1.2rem;
+    }
+    .price p {
+      font-size: .9rem;      
+    }
 
+    .class_name {
+      left: -1%;
+    }
+} 
 
 
 
@@ -949,6 +1011,16 @@ body {
     left: 2%;
 }
 }
+@media (max-width:576px){
+    .clssDetail section {
+      width: 85%;
+      padding: 6% 4%;
+    }
+    .decoLogo {
+      display: none;
+  }
+
+}
 
 
 
@@ -986,6 +1058,13 @@ body {
       #button a {
         width: 46%;
       }
+}
+@media (max-width:576px){
+
+  #button a {
+    width: 56%;
+    font-size: .8rem;
+  }
 }
     /* FAQ*/
 
@@ -1095,7 +1174,7 @@ body {
 
 @media screen and (max-width:767px) {
   .faq .question {
-    font-size: 18px;
+    font-size: 1rem;
   }
 }
 .faq .question span {

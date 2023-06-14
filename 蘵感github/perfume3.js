@@ -57,7 +57,7 @@ function changeBackground(clickedButton) {
 		} else {
 		  button.style.backgroundImage = "url('./img/course_item/block_default.svg')"; // 切换背景图为默认背景图
 		}
-	  } else if (window.innerWidth < 768 && window.innerWidth > 600){
+	  } else if (window.innerWidth <= 768 && window.innerWidth >465){
 		if (buttonId === clickedButton) {
 		  button.style.backgroundImage = "url('./img/course_item/768_block_click.svg')"; // 切换背景图为新的背景图
 		} else {
@@ -105,9 +105,11 @@ window.addEventListener('load', function() {
 	var backgroundImage;
 	if (window.innerWidth > 768) {
 	  backgroundImage = "url('./img/course_item/block_click.svg')";
-	} else {
+	} else if(window.innerWidth <= 768 && window.innerWidth >465){
 	  backgroundImage = "url('./img/course_item/768_block_click.svg')";
-	}
+	} else{
+	  backgroundImage = "url('./img/course_item/500_block_click.svg')";
+	} 
 	button.style.backgroundImage = backgroundImage;
   }
   
