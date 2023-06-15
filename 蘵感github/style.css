@@ -2043,12 +2043,18 @@ img {
     left: 80px;
     top: 80px;
 }
-
+.footer_ul ul:first-child{
+    padding-right: 14%;
+}
+.footer_ul ul:nth-child(2){
+    padding-right: 5%;
+}
 /* RWD桌機 */
 @media (min-width:992px) {
     #footer .blank {
         display: none;
     }
+
 }
 
 /* RED手機 */
@@ -2133,6 +2139,12 @@ img {
         left: 70px;
         top: 2vh;
     }
+    .footer_ul ul:first-child{
+    padding-right: 0%;
+}
+    .footer_ul ul:nth-child(2){
+    padding-right: 0%;
+}
 }
 
 /*----------------- signup0課程報名----------------- */
