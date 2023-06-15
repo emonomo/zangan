@@ -25,9 +25,12 @@ function animateCards() {
   window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > 300) { // Specify the desired scroll trigger height
+    if (scrollTop > 300 ) { // Specify the desired scroll trigger height
       animateCards();
-   }else{
+   }else if(window.innerWidth < 800 && scrollTop > 200 ){
+    animateCards();
+   }
+    else{
       removeAnimation();
     }
   });

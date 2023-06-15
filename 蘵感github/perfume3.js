@@ -72,48 +72,48 @@ function changeBackground(clickedButton) {
 	  }
 	}
   }
-  // 添加窗口大小改变事件监听器
-window.addEventListener('resize', function() {
-	var clickedButton = null; // 传入null代表没有按钮被点击
-	changeBackground(clickedButton);
-  });
- 
-  
-  // 初始化时调用一次，确保初始背景图正确
- 
-
-
-// 在页面加载完成后调用该函数
-window.addEventListener('load', function() {
-	// 获取 list 和 list2 的第一个选项按钮
-	var firstButtonList = document.querySelector('#list .chosen:first-child');
-	var firstButtonList2 = document.querySelector('#list2 .chosen:first-child');
-  
-	// 将第一个选项按钮的背景图设置为默认图像
-	setDefaultBackgroundImage(firstButtonList);
-	setDefaultBackgroundImage(firstButtonList2);
-  
 	// 添加窗口大小改变事件监听器
 	window.addEventListener('resize', function() {
-	  setDefaultBackgroundImage(firstButtonList);
-	  setDefaultBackgroundImage(firstButtonList2);
+		var clickedButton = null; // 传入null代表没有按钮被点击
+		changeBackground(clickedButton);
 	});
-  });
-  
-  // 根据窗口大小设置背景图的函数
-  function setDefaultBackgroundImage(button) {
-	var backgroundImage;
-	if (window.innerWidth > 768) {
-	  backgroundImage = "url('./img/course_item/block_click.svg')";
-	} else if(window.innerWidth <= 768 && window.innerWidth >465){
-	  backgroundImage = "url('./img/course_item/768_block_click.svg')";
-	} else{
-	  backgroundImage = "url('./img/course_item/500_block_click.svg')";
-	} 
-	button.style.backgroundImage = backgroundImage;
-  }
-  
-  changeBackground(null);
+	
+	
+	// 初始化时调用一次，确保初始背景图正确
+	
+
+
+	// 在页面加载完成后调用该函数
+	window.addEventListener('load', function() {
+		// 获取 list 和 list2 的第一个选项按钮
+		var firstButtonList = document.querySelector('#list .chosen:first-child');
+		var firstButtonList2 = document.querySelector('#list2 .chosen:first-child');
+	
+		// 将第一个选项按钮的背景图设置为默认图像
+		setDefaultBackgroundImage(firstButtonList);
+		setDefaultBackgroundImage(firstButtonList2);
+	
+		// 添加窗口大小改变事件监听器
+		window.addEventListener('resize', function() {
+		setDefaultBackgroundImage(firstButtonList);
+		setDefaultBackgroundImage(firstButtonList2);
+		});
+	});
+	
+	// 根据窗口大小设置背景图的函数
+	function setDefaultBackgroundImage(button) {
+		var backgroundImage;
+		if (window.innerWidth > 768) {
+		backgroundImage = "url('./img/course_item/block_click.svg')";
+		} else if(window.innerWidth <= 768 && window.innerWidth >465){
+		backgroundImage = "url('./img/course_item/768_block_click.svg')";
+		} else{
+		backgroundImage = "url('./img/course_item/500_block_click.svg')";
+		} 
+		button.style.backgroundImage = backgroundImage;
+	}
+	
+	changeBackground(null);
 //選單切換    隨著上面按鈕點選，切換下方資訊欄
 let courseShort = document.querySelector('#list');
 let courseLong = document.querySelector('#list2');
@@ -122,10 +122,12 @@ let courseLong = document.querySelector('#list2');
 	function showShort(){
 		courseShort.style.display = 'block'; //顯示
 		courseLong.style.display = 'none';  //隱藏
+		changeClassA();
 		}
 	function showLong(){
 		courseLong.style.display = 'block'; //顯示
 		courseShort.style.display = 'none';  //隱藏
+		changeClassD();
 		}
 
 
@@ -134,21 +136,43 @@ let courseLong = document.querySelector('#list2');
 	let classA = document.querySelector('#classA');
 	let classB = document.querySelector('#classB');
 	let classC = document.querySelector('#classC');
+	let classD = document.querySelector('#classD');
+	let classE = document.querySelector('#classE');
 
 	function changeClassA(){
 			classA.style.display = 'block'; //顯示
 			classB.style.display = 'none';  //隱藏
-			classC.style.display = 'none';  //隱藏
+			classC.style.display = 'none';
+			classD.style.display = 'none';  //隱藏
+			classE.style.display = 'none';  //隱藏
 		}
 	function changeClassB(){
 			classB.style.display = 'block'; //顯示
 			classA.style.display = 'none';  //隱藏
 			classC.style.display = 'none';  //隱藏
+			classD.style.display = 'none';  //隱藏
+			classE.style.display = 'none';  //隱藏
 		}
 	function changeClassC(){
 			classC.style.display = 'block'; //顯示
 			classA.style.display = 'none';  //隱藏
 			classB.style.display = 'none';  //隱藏
+			classD.style.display = 'none';  //隱藏
+			classE.style.display = 'none';  //隱藏
+		}
+	function changeClassD(){
+			classD.style.display = 'block'; //顯示
+			classA.style.display = 'none';  //隱藏
+			classB.style.display = 'none';  //隱藏
+			classC.style.display = 'none';  //隱藏
+			classE.style.display = 'none';  //隱藏
+		}
+	function changeClassE(){
+			classE.style.display = 'block'; //顯示
+			classA.style.display = 'none';  //隱藏
+			classB.style.display = 'none';  //隱藏
+			classC.style.display = 'none';  //隱藏
+			classD.style.display = 'none';  //隱藏
 		}
 
 // <!-- FAQ -->
