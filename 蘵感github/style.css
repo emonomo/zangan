@@ -409,7 +409,7 @@ img {
 }
 
 /* RWD桌機 */
-@media (min-width:992px) {
+/* @media (min-width:992px) {
     #topbar .nav_box {
         display: none;
     }
@@ -417,7 +417,7 @@ img {
     #topbar .hamburger {
         display: none;
     }
-}
+} */
 
 
 /* 漢堡按鈕 topbarrwd */
@@ -428,131 +428,278 @@ img {
     
 } */
 
-/* topbarm RWD手機 */
+/* topbarm */
 #topbarm {
-    display: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #3C4935;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 9999;
+	position: fixed;
+	/* position會將寬度轉換為內容等寬 */
+	top: 0;
+	left: 0;
+	z-index: 999;
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+	/* width: 100%; */
+	
+	/* padding: 20px; */
+	background-color: #3C4935;
+	list-style: none;
     width: 390px;
     height: 70px;
-}
-#topbarm .blank{
-    background-color: #3C4935;
-    /* background-color: red; */
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 55px;
-    top:5px;
-    /* margin: -40px 20px 0 0; */
-}
-#topbarm .nav_box{
+    margin-bottom: 25vh;
 }
 
-
-
-
-
-.menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* 左邊太窄版本 */
-    /* margin: 10px 40px; */
-    /* 新版 */
-    /* margin: 10px 40px 10px 128px; */
-    /* 可用版本 */
-    /* margin: 10px 0px 10px 16%; */
-    margin-left: 8rem;
-    margin-right: -8rem;
-    /* border: solid 3px red; */
+#topbarm .logo {
+	width: 82px;
+    margin: 0 5%;
 }
 
-.icon {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* 左邊太窄版本 */
-    /* margin: 10px 40px; */
-    /* 新版 */
-    /* margin: 10px 40px 10px 128px; */
-    /* 可用版本 */
-    padding-right: 30px;
-    margin: 5px 0 5px 0px;
-    /* border: solid 3px rgb(219, 161, 161); */
+#topbarm ul {
+	display: flex;
+	justify-content: flex-end;
 }
 
-.menu li {
-    /* width: 7em; */
-    /* margin: 5px 40px 5px 0; */
-    /* margin: 5px 20px; */
-    /* margin: 5px 10px; */
-    /* margin: 5px 1.25rem; */
-    margin: 5px 2.5rem 5px 0;
-    /* border: solid 3px red; */
+#topbarm .icon_signup img{
+    margin-left: 1.2rem;
 }
-
-.icon li {
-    /* margin: 5px 40px 5px 0; */
-    margin: 5px 0;
-    /* border: solid 3px red; */
-}
-
-#topbarm h3 {
+#topbarm  h3{
+    width: 5rem;
     color: #fff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.285em;
 }
-
-#topbarm .logo img{
-    display: block;
-    margin-right: 30px;
-    /* margin-left: -90px; */
-    /* border: solid 3px red;  */
-}
-
-.icon_signup {
+#topbarm .icon_signup {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: rgba(155, 130, 86, 0.74);
     border-radius: 2px;
     padding: 5px;
-    width: 130px;
+    width: 167px;
+    height: 35px;
     margin-right: 60px;
 }
 
-.icon_signup img {
+/* .icon a {
+	display: block;
+	width: 35px;
+	height: 35px;
+	margin: 0 5px;
+}
+
+.icon-fb {
+	background-image: url(../images/icon-fb.svg);
+}
+
+.icon-ig {
+	background-image: url(../images/icon-ig.svg);
+}
+
+.icon-line {
+	background-image: url(../images/icon-line.svg);
+}
+
+.icon-fb:hover {
+	background-image: url(../images/icon-fb-hover.svg);
+}
+
+.icon-ig:hover {
+	background-image: url(../images/icon-ig-hover.svg);
+}
+
+.icon-line:hover {
+	background-image: url(../images/icon-line-hover.svg);
+} */
+
+#topbarm .menu {
+	padding: 10px 15px;
+	margin-top: 15px;
+	border-radius: 50px;
+	/* 玻璃擬態(毛玻璃)效果 */
+	background-color: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px);
+	/* 必須搭配背景半透明 */
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* 修改input邊框的預設樣式 */
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
+	width: 300px;
+	height: 100vh;
+}
+
+#topbarm .menu a {
+	/* display: block; */
+	/* text-decoration: none; */
+	/* 取消<a>預設底線 */
+	/* color: black; */
+	/* 修改瀏覽器預設的<a>字色 */
+	/* padding: 5px 10px; */
+	/* text-align: center; */
+}
+
+/* .menu li::after {
+	content: "";
+	display: block;
+	width: 0%;
+	height: 2px;
+	background-color: black;
+} */
+
+#topbarm .menu li:hover::after {
+	/* width: 100%;
+	transition: .35s; */
+	/* 轉場效果 */
+}
+#topbarm .menu img{
     width: 20px;
     height: 20px;
 }
-
-.icon_login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    margin-right: 45px;
+#topbarm a{
+	text-decoration: none;
+}
+#topbarm .icon_logi{
+	margin: 0 auto;
+}
+#topbarm .icon_login img{
+	margin-right: 10%;
 }
 
-.icon_login h3 {
-    width: 60px;
-}
 
-.icon_login img {
-    width: 25px;
-    height: 25px;
-    margin: 0 5px;
-}
-/* RWD桌機 平板不顯示 */
-@media (min-width:576px) {
-    #topbarm{
+/* RWD平板+桌機 */
+@media (min-width:577px){
+	#topbarm{
         display: none;
     }
+	#topbarm .hamburger {
+		display: none;
+	}
+}
+/* RWD手機 */
+@media (max-width:576px) {
+	#topbarm ul {
+		justify-content: center;
+	}
+	/* 漢堡按鈕  */
+	#topbarm .nav_box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	#topbarm .hamburger {
+		display: inline-block;/* 自動抓內容(.bar)的尺寸 */
+		cursor: pointer;
+		/* 取消button預設樣式 */
+		background-color: transparent;
+		border: none;
+		padding: 0;
+	}
+
+	#topbarm .bar {
+		display: block;/* 修改span行內元素為區塊 */
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		background-color: #fff;
+		transition: all 0.3s ease-in-out;
+	}
+
+	#topbarm .hamburger.is-active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	#topbarm .hamburger.is-active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	#topbarm .hamburger.is-active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+	#topbarm .navigation {
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: -20px;
+		padding: 20px;
+		border-radius: 5px;
+		width: 390px;
+
+		/* 玻璃擬態(毛玻璃)效果 */
+		/* background-color: rgba(255, 255, 255, 0.2); */
+		background-color: rgba(60,73,53, 0.85);
+		backdrop-filter: blur(5px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 1px rgba(255, 255, 255, 0.3);
+		
+		animation: navigation 0.35s both;
+	}
+	#topbarm .navigation li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    #topbarm .icon_signup{
+        margin: 0 auto;
+    }
+    #topbarm .icon_login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		margin: 0 auto;
+    }
+
+	@keyframes navigation {
+		from {
+			opacity: 1;
+		}
+
+		to {
+			opacity: 0;
+		}
+	}
+
+	#topbarm .navigation.show {
+		display: block;
+		animation: show 0.35s both;
+	}
+
+	@keyframes show {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+	#topbarm .menu {
+		flex-direction: column;
+		/* 取消玻璃擬態效果 */
+		background-color: transparent;
+		backdrop-filter: none;
+		border: none;
+		box-shadow: none;
+		/* margin-left: 5%; */
+		margin-top: -5vh;
+	}
+	#topbarm .menu li{
+		width: 200px;
+		margin-left: 20%;
+	}
+	#topbarm .menu img{
+		width: 20px;
+		height: 20px;
+	}
+	#topbarm .menu a {
+		padding: 15px 10px;
+	}
+	/* .icon a {
+		margin: 0 3px;
+	} */
 }
 /* 2.banner */
 #banner {
@@ -1532,6 +1679,8 @@ img {
 @media (max-width:576px) {
     #news {
         width: 100%;
+        height: 100vh;
+        margin-top: 0.5vh;
         margin-bottom: 5vh;
         /* height: 100vh; */
         /* margin-top: 200px; */
@@ -1578,7 +1727,8 @@ img {
 /* 7.media */
 #media {
     height: 100vh;
-    margin: 50px 0 250px 0;
+    margin: 50px 0 100px 0;
+    margin: 10vh 0 2vh 0;
 }
 
 /* #media .sect{
@@ -1590,7 +1740,7 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 10vh 5% 10vh 6.5%;
+    margin: 10vh 5% 3vh 6.5%;
     /* border: solid 5px salmon; */
 }
 
@@ -1704,7 +1854,7 @@ img {
 @media (max-width:576px) {
     #media {
         width: 100%;
-        height: 100vh;
+        height: 140vh;
         /* margin-top: 300px; */
         margin-top: -15vh;
         position: relative;
@@ -1718,6 +1868,9 @@ img {
 
     #media .span h3 {
         margin: 50px 100px 0 0;
+    }
+    #media .nav{
+        margin-bottom: 10vh;
     }
 
     #media .nav img {
@@ -1737,7 +1890,6 @@ img {
     #media .item3 {
         margin-bottom: -10vh;
     }
-
     #media .item4,
     #media .item5,
     #media .item6 {
@@ -1745,7 +1897,7 @@ img {
     }
 
     #media .main {
-        margin: 0 0 0 60px;
+        margin: 0 0 0 8%;
         display: flex;
         flex-direction: column;
     }
@@ -1754,14 +1906,15 @@ img {
         /* font-size: 0.85rem; */
         /* font-weight: 700; */
         letter-spacing: 0.15rem;
-        width: 80%;
+        /* width: 80%; */
+        width: 334px;
         /* line-height: 1.5em; */
     }
 
     #media .img img {
-        width: 76%;
-        /* margin: -10px 0 -20px 0; */
-        margin: -2vh 0 -3vh;
+        /* width: 76%; */
+        width: 334px;
+        height: 160px;
     }
 
     #media h3 {
@@ -2134,8 +2287,8 @@ img {
 
 /* 加入預約清單 箭頭 */
 #signup0 .arrow_w {
-    width: 9.75%;
-    height: 7.75vh;
+    width: 9.8%;
+    height: 5.35vh;
     margin: 0 32px 0 10px;
     /* border: solid 3px red; */
     background-image: url(img/index/index-news/arrow\(白\).svg);
@@ -2143,8 +2296,8 @@ img {
 
 /* 箭頭hover */
 #signup0 .arrow_w:hover {
-    width: 9.75%;
-    height: 7.75vh;
+    /* width: 9.75%; */
+    /* height: 7.75vh; */
     margin: 0 32px 0 10px;
     background-image: url(img/index/index-news/arrow\(黑\).svg);
     display: block;
@@ -3304,15 +3457,16 @@ img {
 @media (max-width:576px) {
     #news_content {
         /* width: 100%; */
+        margin-top: 5vh;
         margin-bottom: 5vh;
-        /* height: 100vh; */
+        height: 80vh;
         /* margin-top: 200px; */
     }
     #news_content section{
         /* margin-right:10% ; */
     }
     #news_content .title{
-        margin: 0 0 0 10%;
+        /* margin: 0 0 0 10%; */
     }
     #news_content ul{
         width: 80%;
@@ -3331,22 +3485,27 @@ img {
     #news_content li a:hover{
         width: 100px;
         height: 30px;
-        margin: 0 13%;
+        /* margin: 0 13%; */
         /* margin: 0 80px; */
         padding: 0;
+    }
+    #news_content .pho{
+        margin-top: -10vh;
+        /* margin-bottom: -20vh; */
     }
     #news_content .pho img {
         /* width: 265px; */
         /* height: 250px; */
         width: 390px;
+        /* width: 100%; */
         height: 250px;
-        margin: 10vh 0 0 0;
+        margin:35vh 0 0 -11%;
         object-fit: cover;
     }
 
     #news_content .uu {
         width: 100%;
-        margin: 100px 0 0 -350px;
+        margin: -50vh 0 0 -350px;
     }
 
     #news_content .nav h1 {
@@ -3355,14 +3514,22 @@ img {
     }
 
     #news_content .box1 {
+        width: 100%;
         height: 7vh;
+        margin-top: 3vh;
+        margin-left: -12%;
     }
 
     #news_content hr {
-        width: 18em;
-        margin-left: 1px;
+        width: 20em;
+        margin: 2vh 0 -2vh -12%;
     }
-
+    #news_content .text{
+        /* margin: 3vh 0; */
+    }
+    #news_content .text h2{
+        width: 130%;
+    }
     #news_content .more {
         margin: 10px 40px 0 0;
     }
@@ -3495,17 +3662,25 @@ img {
     /* letter-spacing: 2px; */
     letter-spacing: 0.125rem;
     line-height: 1.2rem;
+    font-weight: 700;
 }
 
 .news_page_text p {
-    line-height: 1.2rem;
+    line-height: 1.25rem;
+    /* line-height: 20px; */
     margin: 20px 0;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    font-size: 0.875rem;
+    width: 98%;
     /* border: solid 1px blue; */
 }
 
 /* 最新消息圖片 */
 .news_page_img img {
-    width: 750px;
+    /* width: 784px; */
+    width: 49rem;
+    /* height: 265px; */
     padding-top: 10px;
 }
 
@@ -3528,6 +3703,46 @@ img {
 .next h3 {
     margin-right: 10px;
     /* border: solid 5px red; */
+}
+/* RED手機 */
+@media (max-width:576px) {
+    #news_page{
+        margin-top: 8vh;
+        margin-left: -90%;
+    }
+    #news_page .wrap{
+        display: none;
+    }
+    #news_page .date{
+        margin: 2vh 0 0 50%;
+    }
+    #news_page .news_page_section{
+        margin: 10vh 0 0 -5.5%;
+    }
+    #news_page .news_page_title h1{
+        font-size: 1rem;
+    }
+    #news_page .news_page_img img{
+        width: 334px;
+        height: 113px;
+    }
+    #news_page .news_page_text{
+        /* width: 332px; */
+        width: 58%;
+        /* height: 359px; */
+    }
+    #news_page .news_page_text p{
+        line-height: 1.5rem;
+    }
+    #news_page .next{
+        /* width: 50%; */
+        /* margin-left: 5%; */
+    }
+    #news_page .news_page_box{
+        width: 40%;
+        margin: 18vh 0 2vh 45%;
+        /* margin:0 0 0 -10%; */
+    }
 }
 
 /* ---文章單獨分頁 media_area--- */
@@ -3667,10 +3882,6 @@ p {
     padding-bottom: 20px;
 }
 
-#media_area .list_box h2 {
-    line-height: 1.5rem;
-}
-
 #media_area h3 {
     color: #5C5C5C;
     font-weight: 500;
@@ -3690,6 +3901,7 @@ p {
 /* 【課程快訊】手作... */
 #media_area .list_box h2 {
     font-weight: 700;
+    line-height: 1.5rem;
     letter-spacing: 0.1rem;
 }
 
@@ -3698,6 +3910,69 @@ p {
     letter-spacing: 0.05rem;
     line-height: 1.2rem;
     /* border: solid 3px red; */
+}
+/* RED手機 */
+@media (max-width:576px) {
+    #media_area{
+        position: relative;
+    }
+    #media_area .title{
+        margin-top: 5vh;
+    }
+    #media_area .title ul{
+        /* width: 350px; */
+        /* height: 50px; */
+        width: 80%;
+        margin: 0 auto;
+    }
+    #media_area .title li{
+        padding: 0 0 0 3%;
+        margin: 0 1%;
+    }
+    #media_area .title li a{
+        width: 100px;
+        height: 30px;
+        padding: 0;
+    }
+    #media_area .item4{
+        /* display: none; */
+        position: absolute;
+        left: 5px;
+        top: 200px;
+    }
+    
+    #media_area .item5{
+        position: absolute;
+        left: 125px;
+        top: 200px;
+    }
+    #media_area .list_item{
+        width: 334px;
+        height: 365px;   
+    }
+    #media_area .list_item img{
+        margin: 0 0 0 -5%;
+        width: 334px;
+        height: 160px;
+    }
+    #media_area .list_box{
+        width: 100%;
+        margin: -5vh 0 10vh -105%;
+    }
+    #media_area .list_box h2{
+        margin-bottom: 20vh;
+    }
+    #media_area .more{
+        margin-left: -0.5%;
+    }
+    #media_area .more img{
+        /* width: 83.5em; */
+        /* height: 8px; */
+        height: 1vh;
+        margin: -25px 0 0 -128px;
+        z-index: 99;
+        position: absolute;
+    }
 }
 
 /* ------media_page-文章詳情頁----- */
@@ -3773,17 +4048,19 @@ p {
 }
 
 /* 文字內容 */
-.media_page_text {
-    /* font-size: 14px; */
-    font-size: 0.875rem;
+.media_page_text{
+    /* font-size: 16px; */
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 23px;
     color: #1D201D;
     /* letter-spacing: 1px; */
     letter-spacing: 0.063rem;
     padding: 10px 0;
     margin: 10px 0;
     text-align: start;
-    width: 800px;
-    /* border: solid 5px red; */
+    width: 785px;
+    /* border: solid 5px rgb(215, 154, 154); */
 }
 
 .media_page_box {
@@ -3857,6 +4134,8 @@ p {
     margin: 10px 0;
     display: block;
     width: 91%;
+    width: 785px;
+    height: 265px;
     object-fit: cover;
     /* border: solid 1px red; */
 }
@@ -3869,7 +4148,7 @@ p {
 
 /* 五個區塊間距 */
 .media_page_text li {
-    /* width: 700px; */
+    width: 785px;
     /* border: solid 3px red; */
 }
 
@@ -3884,41 +4163,104 @@ p {
 /* 一、插花藝術...二... */
 .media_page_text li h2 {
     font-weight: 700;
-    color: #1D201D;
+    color: #797474;
     margin: 60px 0 10px;
     /* border: solid 3px rgb(224, 169, 169); */
 }
 
+/* 內容 */
 .media_page_text h3 {
     color: #797474;
     margin: 10px 0;
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.12em;
     line-height: 1.438rem;
+    font-size: 1rem;
+    font-weight: 500;
+    
 }
 
-/* 分隔線 */
-.under {
-    /* width: 1500px; */
-    border-color: #797474;
-    /* border: solid 1px red; */
-    display: flex;
-    /* margin-top: 100px; */
-    /* padding-top:50px ; */
-    margin: 230px 0 0 -180px;
-    height: 0;
-    width: 1020px;
-    /* position: absolute;
-    bottom: -10px;
-    left: 0; */
+#media_page hr {
+    width: 1182px;
+    height: 1px;
+    margin: 9vh 0 0 -25%;
+    border-color: #1E1E1E;
 }
-
-.under hr {
-    width: 1020px;
-}
-
+/* 手作已經... */
 #media_page .text_block h3 {
     margin: -40px 0 -60px;
+    font-weight: 500;
+    width: 785px;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    line-height: 23px;
     /* border: solid 1px red; */
+}
+/* RED手機 */
+@media (max-width:576px) {
+    #media_page{
+        /* height: 150vh; */
+        margin-top: 8vh;
+        /* margin-left: -90%; */
+        position: relative;
+    }
+    #media_page .all_section{
+        margin-bottom: 80vh;
+    }
+    #media_page .wrap{
+        display: none;
+    }
+    #media_page .media_page_section{
+        margin: 10vh 0 0 -5.5%;
+    }
+    #media_page .date{
+        margin: 0 0 0 35%;
+    }
+    #media_page .media_page_img img{
+        width: 331px;
+        height: 200px;
+        object-fit: fill;
+        margin-top: 6vh;
+    }
+    #media_page .media_page_title{
+        width: 334px;
+        height: 21px;
+    }
+    #media_page .media_page_title img{
+        position: absolute;
+        width: 64px;
+        height: 28px;
+        /* left: 50px; */
+        top: 120px;
+    }
+    #media_page .media_page_title h1{
+        font-size: 1rem;
+    }
+    #media_page hr{
+        width: 333px;
+        margin-left:0.5% ;
+        margin-top: 15vh;
+    }
+    #media_page .media_page_text{
+        width: 82%;
+        margin-left: -0.5%;
+    }
+    #media_page .text_block h3{
+        width: 55%;
+        letter-spacing: 0.12em;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+    #media_page .media_page_text li{
+        width: 55%;
+        letter-spacing: 0.12em;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+    #media_page .more{
+        margin-top: 3vh;
+    }
 }
 
 /* media_content 最底下文章 */
@@ -4047,14 +4389,46 @@ p {
     font-size: 0.875rem;
     font-weight: 500;
 }
+/* RED手機 */
+@media (max-width:576px) {
+    #media_content{
+        margin-top: -7vh;
+        margin-left: 17%;
+    }
+    #media_content .nav{
+        margin-left: -22%;
+    }
+    #media_content .item4,
+    #media_content .item5,
+    #media_content .item6{
+       display: none;
+    }
+    #media_content .main {
+        margin: 0 0 0 30px;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    #media_content h2{
+        letter-spacing: 0.12em;
+        line-height: 24px;
+        font-weight: 700;
+        font-size: 1rem;
+        width: 334px;
+    }
+    #media_content .img img{
+        width: 334px;
+        height: 160px;
+    }
+}
 
 
-
+/* 暫放等待統整 */
 /*分頁 about區 */
 #about1 {
-    height: 50vh;
+    height: 100vh;
     text-align: center;
-    line-height: 50vh;
+    line-height: 100vh;
     display: block;
     background-color: #D8D8D8;
 }
@@ -4065,13 +4439,25 @@ p {
 
 /*分頁 course1區 */
 #course1 {
-    height: 50vh;
+    height: 100vh;
     text-align: center;
-    line-height: 50vh;
+    line-height: 100vh;
     display: block;
     background-color: #D8D8D8;
 }
 
 #course1 h3 {
+    color: #3C4935;
+}
+/*分頁 login1區 */
+#login1 {
+    height: 100vh;
+    text-align: center;
+    line-height: 100vh;
+    display: block;
+    background-color: #D8D8D8;
+}
+
+#login1 h3 {
     color: #3C4935;
 }
