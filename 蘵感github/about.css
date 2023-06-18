@@ -91,13 +91,13 @@ h4{
     font-size: .75rem;
 }
 /* 新增main置中 */
-header{
+/* header{
 	display: flex;
     justify-content: center;
 	flex-direction: column;
 	align-content: center;
 	align-items: center;
-}
+} */
 main {
 	width: 100%;
     display: flex;
@@ -111,53 +111,6 @@ body {
 	overflow-x: hidden;
 	}
 /*-----------------------------------------------------------*/
-/* 頁首區 */
-#topbar{
-	display: flex; /*flex有預設的各種屬性，包括水平*/
-	padding: 15px 108px;
-    background-color: #3C4935;
-	justify-content:  space-between;
-	
-
-}
-
-#topbar nav{
-	
-	display: flex;
-	width: 100%;
-	height: 50px; 
-	justify-content:   space-between;
-	align-items: center;
-}
-
-
-#topbar a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-	padding: 10px 20px;
-}
-
-#topbar li {
-	display: inline-flex;
-	justify-content:  space-around;
-}
-
-
-	.menu{
-		 padding-right: 1%; 
-
-		}
-
-	.img_login{
-		 padding-left: 15%
-	
-		}
-.icon{
-   justify-content: center;
-   align-items: center;
-}
-
 
 
 /* 內容區  */
@@ -677,9 +630,11 @@ body {
 	margin: 6px 0 5px 0;
 }
 .info {
-	height: 70vh;
-	margin-top: 10vh;
+	/* height: 65vh; */
+	padding-top: 10vh;
+	padding-bottom: 5vh;
 }
+
 .info label{
 	font-family: 'Noto Serif TC', serif;
 	letter-spacing:  .12em;
@@ -796,10 +751,10 @@ body {
 	#contact {
 		width: 75%;
 	}
-	.info {
+	/* .info {
 		height: 50vh;
-		margin-top: 10vh;
-	}
+		padding-top: 10vh;
+	} */
 	.access_box #map {
 		flex: 40%;
 		height: 30vh;
@@ -914,33 +869,33 @@ body {
   }
   
   
-  .faq {
+  .faq_box .faq {
 	list-style: none;
 	padding-left: 55px;
   }
-  .faq li {
+  .faq_box .faq li {
 	border-bottom: 1px solid #999999;
 	margin-bottom: 15px;
   }
   
-  .faq .question{
+  .faq_box .faq .question{
 	  padding: 6px;
   }
-  /* .faq h3:hover{
+  /* .faq_box .faq h3:hover{
 	  background-color: #DACFB8;
   } */
   
-  .faq li.active .answer {
+  .faq_box .faq li.active .answer {
 	max-height: 275px !important;
 	padding-bottom: 25px;
 	transition: max-height 0.5s ease, padding-bottom 0.5s ease;
   }
-  .faq li.active .question {
+  .faq_box .faq li.active .question {
 	color: #9B8256;
 	font-weight: 500;
 	transition: color 0.5s ease;
   }
-  .faq .answer {
+  .faq_box .faq .answer {
 	color: #1D201D;
 	font-weight: 300;
 	line-height: 24px;
@@ -948,11 +903,11 @@ body {
 	overflow: hidden;
 	transition: max-height 0.5s ease, padding-bottom 0.5s ease;
   }
-  .faq .answer span {
+  .faq_box .faq .answer span {
 	color: #0000ff;
 	font-weight: 600;
   }
-  .faq .plus-minus-toggle {
+  .faq_box .faq .plus-minus-toggle {
 	cursor: pointer;
 	height: 20px;
 	position: absolute;
@@ -961,7 +916,7 @@ body {
 	top: 48%;
 	z-index: 2; 
   }
-  .faq .plus-minus-toggle:before, .faq .plus-minus-toggle:after {
+  .faq_box .faq .plus-minus-toggle:before, .faq_box .faq .plus-minus-toggle:after {
 	background: #9B8256;
 	content: "";
 	height: 2px;    /* 調整+-粗度 */
@@ -971,18 +926,18 @@ body {
 	width: 18px;
 	transition: transform 500ms ease;
   }
-  .faq .plus-minus-toggle:after {
+  .faq_box .faq .plus-minus-toggle:after {
 	transform-origin: center;
   }
-  .faq .plus-minus-toggle.collapsed:after {
+  .faq_box .faq .plus-minus-toggle.collapsed:after {
 	  background-color: #3C4935;
 	transform: rotate(90deg);
   }
-  .faq .plus-minus-toggle.collapsed:before {
+  .faq_box .faq .plus-minus-toggle.collapsed:before {
 	  background-color: #3C4935;
 	transform: rotate(180deg);
   }
-  .faq .question {
+  .faq_box .faq .question {
 	color: #3C4935;
 	font-weight: 600;
 	position: relative;
@@ -992,28 +947,28 @@ body {
   }
   
   @media screen and (max-width:767px) {
-	.faq .question {
+	.faq_box .faq .question {
 	  font-size: 18px;
 	}
   }
   @media (max-width:450px) {
-  .faq {
+  .faq_box .faq {
     padding-left: 11px;
-}
-.faq .question {
-    font-size: .85rem;
-}
-.faq .answer {
-    font-size: .8rem;
-}
-.faq .plus-minus-toggle {
-    left: -21px;
-}
-.faq .plus-minus-toggle:before, .faq .plus-minus-toggle:after {
-    width: 13px;
-}
+	}
+	.faq_box .faq .question {
+		font-size: .85rem;
+	}
+	.faq_box .faq .answer {
+		font-size: .8rem;
+	}
+	.faq_box .faq .plus-minus-toggle {
+		left: -21px;
+	}
+	.faq_box .faq .plus-minus-toggle:before, .faq_box .faq .plus-minus-toggle:after {
+		width: 13px;
+	}
   }
 
-  .faq .question span {
+  .faq_box .faq .question span {
 	color: #2692ff;
   }
