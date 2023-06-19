@@ -139,6 +139,11 @@ body {
 	.mainTitle {
 		font-size: 1.5rem;
 	}
+	#caption {
+		margin-top: 13vh;
+		margin-bottom: 7vh;
+
+	}
 	#caption .text {
 		width: 80%;
 		height: 55vh;
