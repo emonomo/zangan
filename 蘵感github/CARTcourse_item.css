@@ -95,6 +95,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   }
+li{
+  list-style: none;
+}
 
 /*-----------------------------------------------------------*/
 /* 我之前的頁首區 
@@ -808,7 +811,7 @@ body {
     display: flex;
     justify-content: center;
   }
-    .price{
+  #course .price{
         display: flex;
         width: 19%;
         align-items: center;
@@ -1345,7 +1348,7 @@ body {
     }
     .faq_box .faq .plus-minus-toggle:before, .faq_box .faq .plus-minus-toggle:after {
       width: 13px;
-    }
+    } 
     .faq_box .faq .answer {
       font-size: .8rem;
     }
@@ -1365,12 +1368,14 @@ body {
 
 
 /* ------cart 購物車區------ */
-.showCart{
-    display: none;
+.more img {
+    width: 100px;
+    height: 10px;
+    margin-top: -25px;
 }
 
 #cart {
-    margin: 50px;
+    padding: 50px;
     /* width: 100%; */
     /* border: solid 5px red; */
 }
@@ -1512,7 +1517,7 @@ body {
 }
 
 /* cart茶藝興趣A班區塊 */
-#cart .tea {
+#cart .shop-item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1521,6 +1526,7 @@ body {
     margin: 20px 0 20px 5%;
     height: 80px;
     /* border: solid 5px salmon; */
+    border-bottom: #797474 1px solid;
 }
 
 /* 茶藝上下間距 */
@@ -1529,16 +1535,17 @@ body {
 }
 
 /* cart茶藝興趣A班  */
-#cart .tea h2 {
+#cart .shop-item h2 {
     color: #5C5C5C;
 }
 
 /*週五下午14:00-16:00，共6堂...  */
-#cart .tea .friday {
+#cart .shop-item .friday {
     /* margin: 0 80px; */
     margin: 0 85px 0 130px;
     color: #5C5C5C;
     /* border: solid 3px rgb(241, 181, 181); */
+    font-family: 'Noto Serif TC', serif;
 }
 
 /* cart $8000區塊 */
@@ -1638,7 +1645,7 @@ body {
 }
 
 /*cart 活動:金工山林遊: 悠悠  */
-#cart .tea {
+#cart .shop-item {
     /* position: relative; */
 }
 
@@ -1762,9 +1769,16 @@ body {
 
 #cart .mini {
     width: 15px;
-    border-color: #797474;
+    margin-left: 100px;
 }
+#cart .mini::after {
+content: "";
+display: block;
+width: 15px;
+height: 1px;
+background: #1D201D;
 
+}
 /* RWD桌機 */
 @media (min-width:992px) {
 
@@ -1819,16 +1833,18 @@ body {
         /* margin-bottom: 158.5px; */
     }
 
-    #cart .tea {
+    #cart .shop-item {
         display: flex;
         flex-direction: column;
         /* justify-content: flex-start; */
         /* align-items: center; */
         margin-left: 12%;
         margin-bottom: 10vh;
+    
+
     }
 
-    #cart .tea h2 {
+    #cart .shop-item h2 {
         line-height: 23px;
         margin-left: -62%;
         margin-bottom: 8vh;
