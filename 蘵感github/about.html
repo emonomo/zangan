@@ -7,38 +7,118 @@
     <title>關於蘵感</title>
     <!-- <link rel="stylesheet" href="pages.css"> -->
     <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./basicSetting.css">
 </head>
 <body>
 
-   <!-- header -->
+<!-- topbar 首頁區  -->
 <header id="topbar">
-    <nav>
-        <ul class="menu">
-            <li><a href="news.html">最新消息</a></li>
-            <li><a href="about.html">關於蘵感</a></li>
-            <li><a href="course.html">課程介紹</a></li>
-            <li><a href="media.html">蘵感文章</a></li>
-        </ul>
-
+    <!-- 漢堡按鈕 -->
+    <!-- <div class="nav_box">
+    <button class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+</div> -->
+    <ul class="menu">
+        <li><a href="about.html">
+                <h3>關於蘵感</h3>
+            </a></li>
+        <li><a href="news.html">
+                <h3>最新消息</h3>
+            </a></li>
+        <li><a href="course.html">
+                <h3>課程介紹</h3>
+            </a></li>
+        <li><a href="media.html">
+                <h3>蘵感文章</h3>
+            </a></li>
+    </ul>
+    <a href="index.html" class="logo">
+        <img src="img/index/index-topbar/logo.svg" alt="">
+    </a>
+    <!-- 選單列 -->
+    <nav class="navigation">
         <ul class="icon">
-            <li>
-              <a href="./index.html">
-              <img src="img/index/index-topbar/cn-logo.png" alt="logo image" >
-              </a>
+            <li><a href="signup.html" class="icon_signup">
+                    <h3>快速報名</h3>
+                    <img src="img/index/index-topbar/立即報名（白）.svg" alt="">
+                </a></li>
+            <li><a href="login.html" class="icon_login">
+                    <img src="img/index/index-topbar/user.svg" alt="">
+                    <h3>登入</h3>
+                </a>
+            </li>
+            <li><a href="cart.html"><img src="img/index/index-topbar/cart.svg" alt="" width="40" height="40"></a>
             </li>
         </ul>
-        <ul class="img_login">
-            <li><a href="signup.html">立即報名</a></li>
-            <li><a href="login.html">登入</a></li>
-        </ul>
     </nav>
+</header>
+<!-- topbarm 首頁區  -->
+<header id="topbarm">
+    <div class="nav_box">
+        <!-- 漢堡按鈕 -->
+        <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <!-- 選單列 -->
+        <nav class="navigation">
+            <ul class="menu">
+                <li>
+                    <a href="signup.html" class="icon_signup">
+                        <h3>快速報名</h3>
+                        <img src="img/index/index-topbar/立即報名（白）.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <h3>關於蘵感</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="news.html">
+                        <h3>最新消息</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="course.html">
+                        <h3>課程介紹</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="media.html">
+                        <h3>蘵感文章</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html" class="icon_login">
+                        <img src="img/index/index-topbar/user.svg" alt="">
+                        <h3>登入</h3>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <h1 class="logo">
+        <a href="index.html">
+            <img src="img/index/index-topbar/logo.svg" alt="">
+        </a>
+    </h1>
+    <li>
+        <a href="cart.html"> 
+        <img src="img/index/index-topbar/cart.svg" alt="">
+        </a>
+    </li>
 </header>
     <!-- 內容區 -->
     <main>
         <section id="caption">
                 <h3>ABOUT US</h3>
                 <h1>關於蘵感</h1>
-                <hr style="width: 800px;">
+                <hr>
                 <h3 class="mainTitle">“Ars longs, vita brevis”</h3>
                 <h2>在步調繁忙的生活中，<br>
                     ”蘵感”作為身心靈停歇的棲地，留存您美好韶華的每刻。</h2>      
@@ -130,8 +210,7 @@
        <div class="info">
             <h3>Access</h3> 
             <div class="access_box">
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1074.6013053912216!2d121.51862211277742!3d25.05057768447596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a96c49f1e473%3A0xb4f74ae9ed21c1fb!2z5Y-w5YyX55W25Luj6Jed6KGT6aSo!5e0!3m2!1szh-TW!2sus!4v1684566887614!5m2!1szh-TW!2sus" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="map">
                 </div>
                 <div class="location"> 
                     <div>
@@ -145,8 +224,8 @@
                 </div>
             </div>
         </div>
-       <div class="info">
-            <h3>Contact</h3>
+       <div class="info" id="contact_connect">
+            <h3 >Contact</h3>
             <p> 歡迎填表單聯絡我們，將會盡快回覆!</p>
             <form name="member_mod_form" id="message_form" action="" method="post">
                 <div class="form_left">    
@@ -171,7 +250,7 @@
             </form>
                 
        </div>
-       <div class="info">
+       <div class="info" id="contact_faq">
         <h3>FAQ</h3>
         <p> 一些常見的問題，提供參照。</p>
         <div class="faq_box">
@@ -181,25 +260,25 @@
                   <h2 class="question">和菓子和茶道課程的比例如何分配？
                     <div class="plus-minus-toggle collapsed"></div>
                   </h2>
-                    <p class="answer">A ferramenta <span>Produto Oculto</span> tem como objetivo criar toda a estrutura necessária de forma profissional para que afiliados a sua própria estrutura de anúncios como: <span>Quiz, Advertorial e Página de Vendas</span> fornecidos pelos os produtores parceiros.</p>
+                    <p class="answer">原則上老師會根據每個季節的不同，調整茶道與點心課程的比例，茶道的涵養與美學與四季變化做融合，品茶如同品味四季。</p>
                 </li>
                 <li>
-                  <h2 class="question">完全沒有茶道的經驗也可以報名這個課程嗎？
+                  <h2 class="question">沒茶道的經驗也可以報名這個課程嗎？
                     <div class="plus-minus-toggle collapsed"></div>
                   </h2>
-                   <p class="answer">S完全沒有茶道的經驗也可以報名這個課程嗎？ anunciar tranquilamente e terá ajuda do Gerente de Afiliados do produto que você escolher através de grupos no <span>WhatsApp</span> ou <span>Telegram</span>.</p>
+                   <p class="answer">完全沒有茶道的經驗也可以報名這個課程喔，不需要任何背景知識或技能。我們的課程適合所有年齡層和技能水平的學習者，老師的指導會從基礎的介紹到實際的操作，不用擔心跟不上進度!</p>
                 </li>
                 <li>
-                    <h2 class="question">完全沒有茶道的經驗也可以報名這個課程嗎？
+                    <h2 class="question">我可以攜帶相機拍照或錄影嗎？
                       <div class="plus-minus-toggle collapsed"></div>
                     </h2>
-                     <p class="answer">S完全沒有茶道的經驗也可以報名這個課程嗎？ anunciar tranquilamente e terá ajuda do Gerente de Afiliados do produto que você escolher através de grupos no <span>WhatsApp</span> ou <span>Telegram</span>.</p>
+                     <p class="answer">通常情況下，攝影和錄影是允許的，但請在課程前與導師確認相關規定。某些特殊場合可能需要禁止攝影和錄影。</p>
                 </li>
                  <li>
-                    <h2 class="question">完全沒有茶道的經驗也可以報名這個課程嗎？
+                    <h2 class="question">課程的時間長度是多久？
                       <div class="plus-minus-toggle collapsed"></div>
                     </h2>
-                     <p class="answer">S完全沒有茶道的經驗也可以報名這個課程嗎？ anunciar tranquilamente e terá ajuda do Gerente de Afiliados do produto que você escolher através de grupos no <span>WhatsApp</span> ou <span>Telegram</span>.</p>
+                     <p class="answer">課程的時間長度根據不同的課程內容而有所不同。通常，茶道課程長度為1到2小時，而和果子課程則通常為2到3小時。</p>
                 </li>
               </ul>
             </div>
@@ -211,10 +290,91 @@
     </section>
 </main>
  <!-- 頁尾區 -->
-    <footer></footer>
+    <footer>
+          <!-- 8.footer -->
+  <div id="footer">
+    <div class="blank"></div>
+    <div class="footer_ul">
+        <!-- 第一欄 -->
+        <ul>
+            <div class="footer_li">
+                <div class="footer_nav">
+                    <li>
+                        <h1>
+                            <img src="img/index/index-footer/logo all.svg" alt="">
+                        </h1>
+                    </li>
+                </div>
+                <div class="footer_main">
+                    <li class="copyright">
+                        &copy;ZanGan.aestheticsCourse
+                    </li>
+                </div>
+            </div>
+        </ul>
+        <!-- 第二欄 -->
+        <ul>
+            <div class="footer_li">
+                <div class="footer_nav">
+                    <li>
+                        <a href="about.html#contact">
+                        <h1 class="eng"> Access</h1>
+                        <!-- &nbsp;空白,可以一直增加 -->
+                        <p>
+                        <h3>
+                            <div class="addr">
+                                32462 <br>
+                                台北市枕頭村乃貓巷第一個盆栽下 3F
+                            </div>
+                            <div class="time">
+                                <h3>電話號碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02-9900206</h3>
+                                <h3>營業時間&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10:30-20:00</h3>
+                                <h3>公休日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;星期二/三 (國定假期)</h3>
+                            </div>
+                        </h3>
+                        </p>
+                    </a>
+                    </li>
+                </div>
+                <div class="footer_main">
+                    <li class="icon_soc">
+                        <img src="img/index/index-footer/社群軟體icon.svg" alt="">
+                    </li>
+                </div>
+            </div>
+        </ul>
+        <!-- 第三欄 -->
+        <ul>
+            <div class="footer_li">
+                <div class="footer_nav">
+                    <li class="contact">
+                        <a href="about.html#contact_connect">
+                            <h1 class="eng"> Contact</h1>
+                        </a>
+                        <h3> 有什麼想詢問的嗎?</h3>
+                    </li>
+                </div>
+                <div class="footer_main">
+                    <li class="faq">
+                        <a href="about.html#contact_faq">
+                            <h1 class="eng"> FAQ</h1>
+                        </a>
+                        <h3> 一些常見的問題</h3>
+                    </li>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
+
+    </footer>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
          <!-- jQuery Smoove -->
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
-    <script src="./about.js"></script>
+         <script async
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFLjZQqB-gjKLNMWLio5PdpiB0L0Nh8ZM&callback=initMap">
+     </script>
+         <script src="./about.js"></script>
+         <script src="script.js"></script>
 </body>
 </html>

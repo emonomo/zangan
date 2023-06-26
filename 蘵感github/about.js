@@ -20,12 +20,17 @@ function animateCards() {
     cardGroup.classList.remove('animating');
   }
 
+
+
   window.addEventListener('scroll', function() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > 300) { // Specify the desired scroll trigger height
+    if (scrollTop > 300 ) { // Specify the desired scroll trigger height
       animateCards();
-    } else {
+   }else if(window.innerWidth < 800 && scrollTop > 200 ){
+    animateCards();
+   }
+    else{
       removeAnimation();
     }
   });
@@ -40,6 +45,31 @@ $('.smoove').smoove({
  $('.smoove_2').smoove({
 	offset:'45%',
  });
+
+//地圖api
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: 25.050, lng: 121.519};
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 18,
+    center: uluru,
+    mapId: "6ec3b4c0b755f923"
+  });
+  // The marker, positioned at Uluru 
+  //https://developers.google.com/maps/documentation/javascript/custom-markers?hl=zh-tw
+
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+
+}
+  
+
+
+window.initMap = initMap;
 
 
 // <!-- FAQ -->
